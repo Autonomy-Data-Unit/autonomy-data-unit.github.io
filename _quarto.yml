@@ -12,6 +12,7 @@ website:
     # style: headline
     palette: dark
   navbar:
+    logo: autonomy_logo.png
     search: true
     right:
       - text: "blog"

@@ -1,8 +1,8 @@
 ---
 title: "Autonomy Data Unit"
-image: profile.jpg
+image: autonomy_logo.png
 about:
-  template: jolla
+  template: solana
   links:
     - icon: window
       text: Autonomy website
@@ -12,7 +12,27 @@ about:
       text: Github
       href: https://github.com
       target: _blank
-
 ---
 
-About this blog
+Welcome to the ADU ([Autonomy Data Unit](https://autonomy.work/adu/)) blog! Here we will post some outtakes of our quantitative research,
+tutorials, and general musings on tech and progressive politics.
+
+Our team:
+
+- Lukas Kikuchi &nbsp;&nbsp; 
+  <a href="lukas@autonomy.work" rel="" target="_blank"><i class="bi bi-mailbox" role="img"></i></a>
+  <a href="https://twitter.com/lukas_kikuchi" rel="" target="_blank"><i class="bi bi-twitter" role="img"></i></a> 
+  <a href="https://github.com/lukastk" rel="" target="_blank"><i class="bi bi-github" role="img"></i></a> 
+- Sonia Balagopalan &nbsp;&nbsp; 
+  <a href="sonia@autonomy.work" rel="" target="_blank"><i class="bi bi-mailbox" role="img"></i></a>
+  <a href="https://twitter.com/SoBalagopalan" rel="" target="_blank"><i class="bi bi-twitter" role="img"></i></a> 
+  <a href="https://github.com/sblgpln" rel="" target="_blank"><i class="bi bi-github" role="img"></i></a> 
+- Luiz Garcia &nbsp;&nbsp; 
+  <a href="luiz@autonomy.work" rel="" target="_blank"><i class="bi bi-mailbox" role="img"></i></a>
+- Sean Greaves &nbsp;&nbsp; 
+  <a href="sean@autonomy.work" rel="" target="_blank"><i class="bi bi-mailbox" role="img"></i></a>
+  <a href="https://github.com/RibenaMapleSyrup" rel="" target="_blank"><i class="bi bi-github" role="img"></i></a> 
+  <a href="https://seangreaves.xyz/" rel="" target="_blank"><i class="bi bi-window" role="img"></i></a> 
+- Rowan Trickett &nbsp;&nbsp; 
+  <a href="rowan@autonomy.work" rel="" target="_blank"><i class="bi bi-mailbox" role="img"></i></a>
+  <a href="https://github.com/RTrickett" rel="" target="_blank"><i class="bi bi-github" role="img"></i></a> 
