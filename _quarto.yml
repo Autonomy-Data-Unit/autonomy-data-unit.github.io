@@ -5,6 +5,7 @@ project:
 website:
   title: the ADU blog
   favicon: favicon.png
+  google-analytics: "G-CNN34L2RWE"
   open-graph: true
   cookie-consent:
     type: express
