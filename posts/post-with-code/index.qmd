@@ -4,6 +4,9 @@ author: "Harlow Malloc"
 date: "2023-06-12"
 categories: [news, code, analysis]
 image: "image.jpg"
+comments:
+  giscus:
+    repo: Autonomy-Data-Unit/autonomy-data-unit.github.io
 ---
 
 This is a post with executable code.

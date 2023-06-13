@@ -7,6 +7,8 @@ website:
   favicon: favicon.png
   google-analytics: "G-CNN34L2RWE"
   open-graph: true
+  twitter-card: true
+  site-url: https://data.autonomy.work/
   cookie-consent:
     type: express
     # style: headline
@@ -31,6 +33,7 @@ website:
       - icon: instagram
         href: https://www.instagram.com/autonomy.uk/
         target: _blank
+
 format:
   html:
     grid: 
@@ -47,6 +50,7 @@ format:
       #  - custom.scss
       #  - theme-dark.scss
     css: styles.css
+
 
 # Potential themes to use:
 # lux, morph, litera, simplex

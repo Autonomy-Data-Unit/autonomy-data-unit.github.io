@@ -10,7 +10,7 @@ about:
       target: _blank
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/autonomy-data-unit
       target: _blank
 ---
 

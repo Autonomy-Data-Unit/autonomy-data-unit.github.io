@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://data.autonomy.work/posts/ojs-example/index.html</loc>
+    <lastmod>2023-06-13T13:08:14.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://data.autonomy.work/posts/post-with-code/index.html</loc>
+    <lastmod>2023-06-13T13:08:15.904Z</lastmod>
+  </url>
+  <url>
+    <loc>https://data.autonomy.work/posts/test/index.html</loc>
+    <lastmod>2023-06-13T13:08:16.278Z</lastmod>
+  </url>
+  <url>
+    <loc>https://data.autonomy.work/posts/welcome/index.html</loc>
+    <lastmod>2023-06-13T13:08:16.619Z</lastmod>
+  </url>
+  <url>
+    <loc>https://data.autonomy.work/posts/ojs-example-2/index.html</loc>
+    <lastmod>2023-06-13T13:08:17.412Z</lastmod>
+  </url>
+  <url>
+    <loc>https://data.autonomy.work/index.html</loc>
+    <lastmod>2023-06-13T13:08:17.958Z</lastmod>
+  </url>
+  <url>
+    <loc>https://data.autonomy.work/about.html</loc>
+    <lastmod>2023-06-13T13:08:18.326Z</lastmod>
+  </url>
+</urlset>
