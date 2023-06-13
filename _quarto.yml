@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: the ADU blog
+  title: ADU blog
   favicon: favicon.png
   google-analytics: "G-CNN34L2RWE"
   open-graph: true
@@ -37,7 +37,7 @@ website:
 format:
   html:
     grid: 
-      body-width: 1100px
+      body-width: 1000px
       sidebar-width: 250px
       margin-width: 250px
     include-in-header: header_modify.html
