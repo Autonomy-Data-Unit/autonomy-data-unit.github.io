@@ -1,0 +1,15 @@
+---
+listing:
+  contents: posts
+  sort:
+    - "date desc"
+    - "title desc"
+  filter-ui: true
+  sort-ui: true
+  type: default
+  categories: true
+page-layout: full
+title-block-banner: true
+---
+
+

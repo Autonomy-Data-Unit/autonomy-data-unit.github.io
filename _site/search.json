@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "asdsThis is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "the ADU blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nObservable JS\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nObservable JS\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 12, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 9, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\n  \n\n\n\n\nMatplotlib Demo\n\n\n\n\n\n\n\n\n\n\n\n\nMay 22, 2021\n\n\nNorah Smith\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/test/index.qmd.html",
+    "href": "posts/test/index.qmd.html",
+    "title": "Matplotlib Demo",
+    "section": "",
+    "text": "hello"
+  },
+  {
+    "objectID": "posts/test/index.html",
+    "href": "posts/test/index.html",
+    "title": "Matplotlib Demo",
+    "section": "",
+    "text": "hello\n\n\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nxs = np.linspace(0, 2, 100)\nys = np.exp(xs)\n\nplt.plot(xs, ys)"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "the ADU blog",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nObservable JS\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nObservable JS\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 12, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 9, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\n  \n\n\n\n\nMatplotlib Demo\n\n\n\n\n\n\n\n\n\n\n\n\nMay 22, 2021\n\n\nNorah Smith\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/posts/post-with-code/index.html",
+    "href": "blog/posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "blog/posts/test/index.html",
+    "href": "blog/posts/test/index.html",
+    "title": "Matplotlib Demo",
+    "section": "",
+    "text": "hello\n\n\nCode\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nxs = np.linspace(0, 2, 100)\nys = np.exp(xs)\n\nplt.plot(xs, ys)"
+  },
+  {
+    "objectID": "blog/posts/welcome/index.html",
+    "href": "blog/posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "blog/posts/ojs-example/index.html",
+    "href": "blog/posts/ojs-example/index.html",
+    "title": "Observable JS",
+    "section": "",
+    "text": "Quarto includes native support for Observable JS, a set of enhancements to vanilla JavaScript created by Mike Bostock (also the author of D3). Observable JS is distinguished by its reactive runtime, which is especially well suited for interactive data exploration and analysis.\nThe creators of Observable JS (Observable, Inc.) run a hosted service at https://observablehq.com/ where you can create and publish notebooks. Additionally, you can use Observable JS (“OJS”) in standalone documents and websites via its core libraries. Quarto uses these libraries along with a compiler that is run at render time to enable the use of OJS within Quarto documents.\nOJS works in any Quarto document (plain markdown as well as Jupyter and Knitr documents). Just include your code in an {ojs} executable code block. Documents that use OJS need to run on the http:// or https:// protocol and not the file:// protocol. The rest of this article explains the basics of using OJS with Quarto."
+  },
+  {
+    "objectID": "blog/posts/ojs-example/index_old.html",
+    "href": "blog/posts/ojs-example/index_old.html",
+    "title": "Matplotlib Demo",
+    "section": "",
+    "text": "Code\ndata = FileAttachment(\"penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\n\n\n\nCode\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nfiltered = data.filter(function(penguin) {\n  return bill_length_min &lt; penguin.bill_length &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\n\n\nCode\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)"
+  },
+  {
+    "objectID": "index_old.html",
+    "href": "index_old.html",
+    "title": "Matplotlib Demo",
+    "section": "",
+    "text": "Code\ndata = FileAttachment(\"penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\n\n\n\nCode\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nfiltered = data.filter(function(penguin) {\n  return bill_length_min &lt; penguin.bill_length &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\n\n\nCode\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)"
+  },
+  {
+    "objectID": "blog/posts/ojs-example/index.html#overview",
+    "href": "blog/posts/ojs-example/index.html#overview",
+    "title": "Observable JS",
+    "section": "",
+    "text": "Quarto includes native support for Observable JS, a set of enhancements to vanilla JavaScript created by Mike Bostock (also the author of D3). Observable JS is distinguished by its reactive runtime, which is especially well suited for interactive data exploration and analysis.\nThe creators of Observable JS (Observable, Inc.) run a hosted service at https://observablehq.com/ where you can create and publish notebooks. Additionally, you can use Observable JS (“OJS”) in standalone documents and websites via its core libraries. Quarto uses these libraries along with a compiler that is run at render time to enable the use of OJS within Quarto documents.\nOJS works in any Quarto document (plain markdown as well as Jupyter and Knitr documents). Just include your code in an {ojs} executable code block. Documents that use OJS need to run on the http:// or https:// protocol and not the file:// protocol. The rest of this article explains the basics of using OJS with Quarto."
+  },
+  {
+    "objectID": "blog/posts/ojs-example/index.html#example",
+    "href": "blog/posts/ojs-example/index.html#example",
+    "title": "Observable JS",
+    "section": "Example",
+    "text": "Example\nWe’ll start with a simple example based on Allison Horst’s Palmer Penguins dataset. Here we look at how penguin body mass varies across both sex and species (use the provided inputs to filter the dataset by bill length and island):\n\nfiltered = transpose(data).filter(function(penguin) {\n  return bill_length_min &lt; penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\nLet’s take a look at the source code for this example. First we create an {ojs} cell that reads in some data from a CSV file using a FileAttachment:\n```{ojs}\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n```\nThe example above doesn’t plot all of the data but rather a filtered subset. To create our filter we’ll need some inputs, and we’ll want to be able to use the values of these inputs in our filtering function. To do this, we use the viewof keyword and with some standard Inputs:\n```{ojs}\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n```\nNow we write the filtering function that will transform the data read from the CSV using the values of bill_length_min and island.\n```{ojs}\nfiltered = data.filter(function(penguin) {\n  return bill_length_min &lt; penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n```\nHere we see reactivity in action: we don’t need any special syntax to refer to the dynamic input values, they “just work”, and the filtering code is automatically re-run when the inputs change. This works in much the same way a spreadsheet works when you update a cell and other cells that refer to it are recalculated.\nFinally, we’ll plot the filtered data using Observable Plot (an open-source JavaScript library for quick visualization of tabular data):\n```{ojs}\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n```\nNote that as with our inputs, we refer to the filtered variable with no special syntax—the plotting code will be automatically re-run whenever filtered changes (which in turn is updated whenever an input changes).\nThat covers a basic end-to-end use of OJS (see the Penguins examples for the full source code).\n\n\n\n\n\n\nIf you take a look at the Penguins code, you’ll notice something curious: the inputs and plotting code are defined before the data processing code. This demonstrates a critical difference between OJS cell execution and traditional notebooks: cells do not need to be defined in any particular order.\nBecause execution is fully reactive, the runtime will automatically execute cells in the correct order based on how they reference each other. This is more akin to a spreadsheet than a traditional notebook with linear cell execution."
+  },
+  {
+    "objectID": "blog/posts/ojs-example/index.html#libraries",
+    "href": "blog/posts/ojs-example/index.html#libraries",
+    "title": "Observable JS",
+    "section": "Libraries",
+    "text": "Libraries\nOur example above made use of several standard libraries, including:\n\nObservable stdlib — Core primitives for DOM manipulation, file handling, importing code, and much more.\nObservable Inputs — Standard inputs controls including sliders, drop-downs, tables, check-boxes, etc.\nObservable Plot — High level plotting library for exploratory data visualization.\n\nThe libraries are somewhat special because they are automatically available within notebooks on https://observablehq.com as well as within {ojs} cells in Quarto documents.\nUsing other JavaScript libraries is also straightforward, they just need to be explicitly imported. For example, here we import a some libraries using the require function (which in turn loads NPM modules from jsDelivr):\n```{ojs}\nd3 = require(\"d3@7\")\ntopojson = require(\"topojson\")\n```\nSee the article on Libraries to learn more about using standard and third-party libraries."
+  },
+  {
+    "objectID": "blog/posts/ojs-example/index.html#data-sources",
+    "href": "blog/posts/ojs-example/index.html#data-sources",
+    "title": "Observable JS",
+    "section": "Data Sources",
+    "text": "Data Sources\nIn our initial example we used a FileAttachment as our data source. File attachments support many formats including CSV, TSV, JSON, Arrow (uncompressed), and SQLite so are a convenient way to read a dataset that has already been prepared for analysis.\nFrequently though you’ll need to do some pre-processing of your data in Python or R before it’s ready for visualization. Within Quarto, you can do this pre-processing during document render then make the results available to OJS.\nUse the ojs_define() function from Python or R to define variables that you want to use within JavaScript. For example, to reproduce the simple CSV read in Python you might do this:\n\n```{python}\nimport pandas as pd\npenguins = pd.read_csv(\"palmer-penguins.csv\")\nojs_define(data = penguins)\n```\n\n\n\n\nThe call to ojs_define(data = penguins) says that we want to make a variable named data (with the value of the penguins data frame) available to OJS\nDepending on the visualization library you use, one additional step may be required to consume the data from JavaScript. In this case, the Plot function expects data by row rather than by column, so we transpose() it before filtering:\n```{ojs}\nfiltered = transpose(data).filter(function(penguin) {\n  return bill_length_min &lt; penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n```\nSee the article on Data Sources to learn more about the various ways to prepare and read data."
+  },
+  {
+    "objectID": "blog/posts/ojs-example/index.html#ojs-cells",
+    "href": "blog/posts/ojs-example/index.html#ojs-cells",
+    "title": "Observable JS",
+    "section": "OJS Cells",
+    "text": "OJS Cells\nThere are many options available to customize the behavior of {ojs} code cells, including showing, hiding, and collapsing code as well as controlling the visibility and layout of outputs.\nThe most important cell option to be aware of is the echo option, which controls whether source code is displayed. You’ll have different preferences depending on whether you are embedding visualizations in an article or creating a notebook or full-on tutorial.\nCode in {ojs} cells is displayed by default. To prevent display of code for an entire document, set the echo: false option in YAML metadata:\n---\ntitle: \"My Document\"\nexecute:\n  echo: false\n---\nYou can also specify this option on a per-cell basis. For example:\n```{ojs}\n//| echo: false\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n```\nTo learn about all of the options available, see the article on OJS Cells."
+  },
+  {
+    "objectID": "blog/posts/ojs-example/index.html#learning-more",
+    "href": "blog/posts/ojs-example/index.html#learning-more",
+    "title": "Observable JS",
+    "section": "Learning More",
+    "text": "Learning More\nThese articles go into more depth on using OJS in Quarto documents:\n\nLibraries covers using standard libraries and external JavaScript libraries.\nData Sources outlines the various ways to read and pre-process data.\nOJS Cells goes into more depth on cell execution, output, and layout.\nShiny Reactives describes how to integrate Shiny with OJS.\nCode Reuse delves into ways to re-use OJS code across multiple documents.\n\nIf you want to learn more about the underlying mechanics of reactivity, check out these notebooks from Mike Bostock:\n\nFive Minute Introduction\nObservable’s not JavaScript\nIntroduction to Views\nHow Observable Runs"
+  },
+  {
+    "objectID": "blog/posts/ojs-example-2/index.html",
+    "href": "blog/posts/ojs-example-2/index.html",
+    "title": "Observable JS",
+    "section": "",
+    "text": "filtered = transpose(data).filter(function(penguin) {\n  return bill_length_min &lt; penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)"
+  },
+  {
+    "objectID": "posts/ojs-example/index.html",
+    "href": "posts/ojs-example/index.html",
+    "title": "Observable JS",
+    "section": "",
+    "text": "Quarto includes native support for Observable JS, a set of enhancements to vanilla JavaScript created by Mike Bostock (also the author of D3). Observable JS is distinguished by its reactive runtime, which is especially well suited for interactive data exploration and analysis.\nThe creators of Observable JS (Observable, Inc.) run a hosted service at https://observablehq.com/ where you can create and publish notebooks. Additionally, you can use Observable JS (“OJS”) in standalone documents and websites via its core libraries. Quarto uses these libraries along with a compiler that is run at render time to enable the use of OJS within Quarto documents.\nOJS works in any Quarto document (plain markdown as well as Jupyter and Knitr documents). Just include your code in an {ojs} executable code block. Documents that use OJS need to run on the http:// or https:// protocol and not the file:// protocol. The rest of this article explains the basics of using OJS with Quarto."
+  },
+  {
+    "objectID": "posts/ojs-example/index.html#overview",
+    "href": "posts/ojs-example/index.html#overview",
+    "title": "Observable JS",
+    "section": "",
+    "text": "Quarto includes native support for Observable JS, a set of enhancements to vanilla JavaScript created by Mike Bostock (also the author of D3). Observable JS is distinguished by its reactive runtime, which is especially well suited for interactive data exploration and analysis.\nThe creators of Observable JS (Observable, Inc.) run a hosted service at https://observablehq.com/ where you can create and publish notebooks. Additionally, you can use Observable JS (“OJS”) in standalone documents and websites via its core libraries. Quarto uses these libraries along with a compiler that is run at render time to enable the use of OJS within Quarto documents.\nOJS works in any Quarto document (plain markdown as well as Jupyter and Knitr documents). Just include your code in an {ojs} executable code block. Documents that use OJS need to run on the http:// or https:// protocol and not the file:// protocol. The rest of this article explains the basics of using OJS with Quarto."
+  },
+  {
+    "objectID": "posts/ojs-example/index.html#example",
+    "href": "posts/ojs-example/index.html#example",
+    "title": "Observable JS",
+    "section": "Example",
+    "text": "Example\nWe’ll start with a simple example based on Allison Horst’s Palmer Penguins dataset. Here we look at how penguin body mass varies across both sex and species (use the provided inputs to filter the dataset by bill length and island):\n\nfiltered = transpose(data).filter(function(penguin) {\n  return bill_length_min &lt; penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\nLet’s take a look at the source code for this example. First we create an {ojs} cell that reads in some data from a CSV file using a FileAttachment:\n```{ojs}\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n```\nThe example above doesn’t plot all of the data but rather a filtered subset. To create our filter we’ll need some inputs, and we’ll want to be able to use the values of these inputs in our filtering function. To do this, we use the viewof keyword and with some standard Inputs:\n```{ojs}\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n```\nNow we write the filtering function that will transform the data read from the CSV using the values of bill_length_min and island.\n```{ojs}\nfiltered = data.filter(function(penguin) {\n  return bill_length_min &lt; penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n```\nHere we see reactivity in action: we don’t need any special syntax to refer to the dynamic input values, they “just work”, and the filtering code is automatically re-run when the inputs change. This works in much the same way a spreadsheet works when you update a cell and other cells that refer to it are recalculated.\nFinally, we’ll plot the filtered data using Observable Plot (an open-source JavaScript library for quick visualization of tabular data):\n```{ojs}\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n```\nNote that as with our inputs, we refer to the filtered variable with no special syntax—the plotting code will be automatically re-run whenever filtered changes (which in turn is updated whenever an input changes).\nThat covers a basic end-to-end use of OJS (see the Penguins examples for the full source code).\n\n\n\n\n\n\nIf you take a look at the Penguins code, you’ll notice something curious: the inputs and plotting code are defined before the data processing code. This demonstrates a critical difference between OJS cell execution and traditional notebooks: cells do not need to be defined in any particular order.\nBecause execution is fully reactive, the runtime will automatically execute cells in the correct order based on how they reference each other. This is more akin to a spreadsheet than a traditional notebook with linear cell execution."
+  },
+  {
+    "objectID": "posts/ojs-example/index.html#libraries",
+    "href": "posts/ojs-example/index.html#libraries",
+    "title": "Observable JS",
+    "section": "Libraries",
+    "text": "Libraries\nOur example above made use of several standard libraries, including:\n\nObservable stdlib — Core primitives for DOM manipulation, file handling, importing code, and much more.\nObservable Inputs — Standard inputs controls including sliders, drop-downs, tables, check-boxes, etc.\nObservable Plot — High level plotting library for exploratory data visualization.\n\nThe libraries are somewhat special because they are automatically available within notebooks on https://observablehq.com as well as within {ojs} cells in Quarto documents.\nUsing other JavaScript libraries is also straightforward, they just need to be explicitly imported. For example, here we import a some libraries using the require function (which in turn loads NPM modules from jsDelivr):\n```{ojs}\nd3 = require(\"d3@7\")\ntopojson = require(\"topojson\")\n```\nSee the article on Libraries to learn more about using standard and third-party libraries."
+  },
+  {
+    "objectID": "posts/ojs-example/index.html#data-sources",
+    "href": "posts/ojs-example/index.html#data-sources",
+    "title": "Observable JS",
+    "section": "Data Sources",
+    "text": "Data Sources\nIn our initial example we used a FileAttachment as our data source. File attachments support many formats including CSV, TSV, JSON, Arrow (uncompressed), and SQLite so are a convenient way to read a dataset that has already been prepared for analysis.\nFrequently though you’ll need to do some pre-processing of your data in Python or R before it’s ready for visualization. Within Quarto, you can do this pre-processing during document render then make the results available to OJS.\nUse the ojs_define() function from Python or R to define variables that you want to use within JavaScript. For example, to reproduce the simple CSV read in Python you might do this:\n\n```{python}\nimport pandas as pd\npenguins = pd.read_csv(\"palmer-penguins.csv\")\nojs_define(data = penguins)\n```\n\n\n\n\nThe call to ojs_define(data = penguins) says that we want to make a variable named data (with the value of the penguins data frame) available to OJS\nDepending on the visualization library you use, one additional step may be required to consume the data from JavaScript. In this case, the Plot function expects data by row rather than by column, so we transpose() it before filtering:\n```{ojs}\nfiltered = transpose(data).filter(function(penguin) {\n  return bill_length_min &lt; penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n```\nSee the article on Data Sources to learn more about the various ways to prepare and read data."
+  },
+  {
+    "objectID": "posts/ojs-example/index.html#ojs-cells",
+    "href": "posts/ojs-example/index.html#ojs-cells",
+    "title": "Observable JS",
+    "section": "OJS Cells",
+    "text": "OJS Cells\nThere are many options available to customize the behavior of {ojs} code cells, including showing, hiding, and collapsing code as well as controlling the visibility and layout of outputs.\nThe most important cell option to be aware of is the echo option, which controls whether source code is displayed. You’ll have different preferences depending on whether you are embedding visualizations in an article or creating a notebook or full-on tutorial.\nCode in {ojs} cells is displayed by default. To prevent display of code for an entire document, set the echo: false option in YAML metadata:\n---\ntitle: \"My Document\"\nexecute:\n  echo: false\n---\nYou can also specify this option on a per-cell basis. For example:\n```{ojs}\n//| echo: false\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n```\nTo learn about all of the options available, see the article on OJS Cells."
+  },
+  {
+    "objectID": "posts/ojs-example/index.html#learning-more",
+    "href": "posts/ojs-example/index.html#learning-more",
+    "title": "Observable JS",
+    "section": "Learning More",
+    "text": "Learning More\nThese articles go into more depth on using OJS in Quarto documents:\n\nLibraries covers using standard libraries and external JavaScript libraries.\nData Sources outlines the various ways to read and pre-process data.\nOJS Cells goes into more depth on cell execution, output, and layout.\nShiny Reactives describes how to integrate Shiny with OJS.\nCode Reuse delves into ways to re-use OJS code across multiple documents.\n\nIf you want to learn more about the underlying mechanics of reactivity, check out these notebooks from Mike Bostock:\n\nFive Minute Introduction\nObservable’s not JavaScript\nIntroduction to Views\nHow Observable Runs"
+  },
+  {
+    "objectID": "posts/ojs-example-2/index.html",
+    "href": "posts/ojs-example-2/index.html",
+    "title": "Observable JS",
+    "section": "",
+    "text": "filtered = transpose(data).filter(function(penguin) {\n  return bill_length_min &lt; penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)"
+  }
+]

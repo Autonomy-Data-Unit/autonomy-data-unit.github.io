@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: the ADU blog
+  favicon: favicon.png
+  open-graph: true
+  cookie-consent:
+    type: express
+    # style: headline
+    palette: dark
+  navbar:
+    search: true
+    right:
+      - text: "blog"
+        file: index.qmd
+      - text: "about"
+        file: about.qmd
+      - icon: github
+        href: https://github.com/Autonomy-Data-Unit
+      - icon: twitter
+        href: https://twitter.com/Autonomy_UK
+      - icon: instagram
+        href: https://www.instagram.com/autonomy.uk/
+format:
+  html:
+    grid: 
+      body-width: 1100px
+      sidebar-width: 250px
+      margin-width: 250px
+    include-in-header: header_modify.html
+    theme:
+      light:
+        - simplex
+        - custom.scss
+      dark:
+        - simplex
+        - custom.scss
+        - theme-dark.scss
+    css: styles.css
+
+# Potential themes to use:
+# lux, morph, litera, simplex
+
