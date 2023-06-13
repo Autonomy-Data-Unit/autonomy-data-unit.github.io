@@ -17,12 +17,18 @@ website:
         file: index.qmd
       - text: "about"
         file: about.qmd
+      - icon: window
+        href: https://autonomy.work/adu/
+        target: _blank
       - icon: github
         href: https://github.com/Autonomy-Data-Unit
+        target: _blank
       - icon: twitter
         href: https://twitter.com/Autonomy_UK
+        target: _blank
       - icon: instagram
         href: https://www.instagram.com/autonomy.uk/
+        target: _blank
 format:
   html:
     grid: 
@@ -34,10 +40,10 @@ format:
       light:
         - simplex
         - custom.scss
-      dark:
-        - simplex
-        - custom.scss
-        - theme-dark.scss
+      #dark:
+      #  - simplex
+      #  - custom.scss
+      #  - theme-dark.scss
     css: styles.css
 
 # Potential themes to use:

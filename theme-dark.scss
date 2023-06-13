@@ -4,5 +4,29 @@ $body-bg: #181818;
 $body-color: white;
 $link-color: #75AADB;
 
+.navbar {
+    background-color: #222 !important;
+    border-width: 0px !important;
+}
+.navbar-title {
+    color: #AAA !important;
+}
+.navbar-title #adu {
+    color: white !important;
+}
+.navbar-title:hover {
+    color: #888 !important;
+}
+.navbar-title:hover > #adu {
+    color: #DDD !important;
+}
+
+.nav-item {
+    color: #FFF !important;
+}
+.bi {
+    color: white !important;
+}
+
 // Code blocks
 $code-block-bg-alpha: -.8;
