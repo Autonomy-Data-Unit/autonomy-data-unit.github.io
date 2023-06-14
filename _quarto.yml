@@ -37,7 +37,7 @@ website:
 format:
   html:
     grid: 
-      body-width: 1000px
+      body-width: 900px
       sidebar-width: 250px
       margin-width: 250px
     include-in-header: header_modify.html

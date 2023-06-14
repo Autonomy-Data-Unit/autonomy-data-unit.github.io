@@ -9,7 +9,9 @@ body {
 }
 
 .navbar {
+    /* background-color: #ECECEC; */
     background-color: #ECECEC;
+    border-width: 0px;
 }
 
 .nav-item .menu-text {
@@ -18,7 +20,7 @@ body {
 
 .navbar-title {
     font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2.5rem;
     color: #666;
 }
