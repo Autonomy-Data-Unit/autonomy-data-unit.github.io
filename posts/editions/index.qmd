@@ -34,7 +34,7 @@ If we load the webpage for Popeyes Louisiana Kitchen, we can identify the partne
 
 ![](assets/assembly.jpeg)
 
-To find all the other partners based at Whitechapel Editions (`london/whitechapel-editions`), we can search for Editions partners (`tags=deliveroo+editions`) nearby with the following url: `https://deliveroo.co.uk/restaurants/london/whitechapel-editions?fulfillment_method=DELIVERY&tags=deliveroo+editions`. We can deduce that all the restaurants based 0.0 miles away are those at the editions kitchen and can validate this by checking for `whitechapel-editions` in their urls.
+To find all the other partners based at Whitechapel Editions (`london/whitechapel-editions`), we can search for Editions partners (`tags=deliveroo+editions`) nearby with the following url: `https://deliveroo.co.uk/restaurants/london/whitechapel-editions?fulfillment_method=DELIVERY&tags=deliveroo+editions`. We can deduce that all the restaurants based 0.0 miles away are those at the Editions kitchen and can validate this by checking for `whitechapel-editions` in their urls.
 
 ![](assets/whitechapel.png)
 
@@ -46,7 +46,7 @@ Deliveroo's website has been archived many times by the Wayback Machine. Some of
 
 ![](assets/wayback.png)
 
-By iterating through every capture extracting the restaurant names, restaurant urls, editions and timestamps, we can build a dataset of over 500 Editions partners:
+By iterating through every capture extracting the restaurant names, restaurant urls, Editions and timestamps, we can build a dataset of over 500 Editions partners:
 
 ```{python}
 #| echo: false
