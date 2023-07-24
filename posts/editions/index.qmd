@@ -1,7 +1,7 @@
 ---
 title: Dark Kitchen Cartography
 author: Sean Greaves
-description: Building a map of Deliveroo's UK Editions sites with web-scraping
+description: Building a UK-wide map of Deliveroo Editions
 date: '2023-07-24'
 draft: false
 image: assets/cover.png
@@ -11,7 +11,7 @@ categories: [analysis]
 
 ![](assets/cover.png)
 
-Dedicated sites for preparing takeaway meals for delivery only known as "dark kitchens" have become a widely adopted model in the food service industry throughout the past half decade. Dark kitchens enable a restaurant's delivery business to be seperated from in-house business and operated from non-residential central locations where overhead and operating costs are reduced. Understanding the successes and failures of this service model could provide useful insights into emerging forms of economic planning, risk management, urban design and food distribution. However there is a lack of detailed data on the growth and current state of dark kitchens within the UK.
+Dedicated sites for preparing takeaway meals for delivery-only known as "dark kitchens" have been widely adopted across the food service industry throughout the past half decade. Dark kitchens enable restaurants to seperate their delivery business from in-house business and operate from non-residential central locations where overhead and operating costs are reduced. Understanding the successes and failures of this service model could provide useful insights into emerging forms of economic planning, risk management, urban design and food distribution. However there is a lack of detailed data on the growth and current state of dark kitchens within the UK.
 
 To the best of our knowledge, a map of the UK's dark kitchen locations does not exist. Therefore we set out to make one for Deliveroo's UK dark kitchen facilities, known as 'Editions', to better understand their growth and current state.
 
@@ -22,19 +22,19 @@ To the best of our knowledge, a map of the UK's dark kitchen locations does not 
 ## Locating Editions
 
 
-Deliveroo Editions was launched in May 2017 as a 'concept that puts an end to postcode food envy'. Initially trialed in Camberwell, Battersea, Dulwich and Canary Wharf, Deliveroo announced there ambition to scale to [30 locations across the UK](https://www.wired.co.uk/article/deliveroo-editions-local-restaurants) within the first year. The Internet Archive's Wayback Machine maintains a capture of the webpage for the original Deliveroo Editions announcement.
+Deliveroo Editions launched in May 2017 as a concept to put 'an end to postcode food envy'. Initially trialed in Camberwell, Battersea, Dulwich and Canary Wharf, Deliveroo announced there ambition to scale to [30 locations across the UK](https://www.wired.co.uk/article/deliveroo-editions-local-restaurants) within the first year. The Internet Archive's Wayback Machine maintains a capture of the webpage for the original Deliveroo Editions announcement.
 
 ![](assets/editions_launch.png)
 
-To find Editions restaurants we can add `tags=deliveroo+editions` as a query string when searching for restaurants near a given location. For example to find all the Editions partners delivering to Stepney Green, we can try: `https://deliveroo.co.uk/restaurants/london/stepney-green?fulfillment_method=DELIVERY&tags=deliveroo+editions`:
+To find restaurants using Deliveroo's dark kitchens, known as Editions partners, we can add `tags=deliveroo+editions` as a query string when searching for restaurants near a given location. For example to find all the Editions partners delivering to Stepney Green, we can try: `https://deliveroo.co.uk/restaurants/london/stepney-green?fulfillment_method=DELIVERY&tags=deliveroo+editions`:
 
 ![](assets/query.png)
 
-If we load the webpage for Popeyes Louisiana Kitchen, we can identify the restaurant is based at "Whitechapel Editions" from the location name in restaurant's url: `https://deliveroo.co.uk/menu/London/whitechapel-editions/popeyes-editions-wme/?day=today&geohash=gcpvngtckn3c&time=ASAP`. Therefore the address for Popeyes Louisiana Kitchen is also the address for Whitechapel Editions which happens to be 10 Assembly Passage, London, E14UT, a [2-storey B-class office space with a disco ball included built in 1906](https://www.loopnet.co.uk/Listing/10-40-Assembly-Passage-London/8354101/) right next to the busy A11 road into central London.
+If we load the webpage for Popeyes Louisiana Kitchen, we can identify the partner is based at "Whitechapel Editions" from the location name in restaurant's url: `https://deliveroo.co.uk/menu/London/whitechapel-editions/popeyes-editions-wme/?day=today&geohash=gcpvngtckn3c&time=ASAP`. Therefore the address for Popeyes Louisiana Kitchen is also the address for Whitechapel Editions which happens to be 10 Assembly Passage, London, E14UT, a [2-storey B-class office space with a disco ball included built in 1906](https://www.loopnet.co.uk/Listing/10-40-Assembly-Passage-London/8354101/) right next to the busy A11 road into central London.
 
 ![](assets/assembly.jpeg)
 
-To find all the other restaurants based at Whitechapel Editions (`london/whitechapel-editions`), we can search for Editions partners (`tags=deliveroo+editions`) nearby with the following url: `https://deliveroo.co.uk/restaurants/london/whitechapel-editions?fulfillment_method=DELIVERY&tags=deliveroo+editions`. We can deduce that all the restaurants based 0.0 miles away are those at the editions kitchen and can validate this by checking for `whitechapel-editions` in their urls.
+To find all the other partners based at Whitechapel Editions (`london/whitechapel-editions`), we can search for Editions partners (`tags=deliveroo+editions`) nearby with the following url: `https://deliveroo.co.uk/restaurants/london/whitechapel-editions?fulfillment_method=DELIVERY&tags=deliveroo+editions`. We can deduce that all the restaurants based 0.0 miles away are those at the editions kitchen and can validate this by checking for `whitechapel-editions` in their urls.
 
 ![](assets/whitechapel.png)
 
@@ -63,7 +63,7 @@ Many of Deliveroo's well known Editions locations can be found by searching the 
 
 ![](assets/fsa.png)
 
-We can cross reference 16 of these businesses with editions names encountered from searching Deliveroo's site:
+We can cross reference 16 of these businesses with Editions locations encountered from searching Deliveroo's site:
 
 ```{python}
 #| echo: false
@@ -85,7 +85,7 @@ pd.DataFrame([{'Editions Name': 'bsy-2-editions', 'FSA Business': 'Deliveroo sp 
              {'Editions Name': 'bristol-editions-site', 'FSA Business': 'Deliveroo SP Ltd', 'Address':  'Unit 1 Glenfrome House Eastgate Road Eastville Bristol BS5 6XX'}])
 ```
 
-However there are many Editions partners that do not operate from any of these sites. Here is a handful of examples:
+However there are many Editions partners that do not operate from any of these addresses. Here is a handful of examples:
 
 - [Luxford Burgers](https://deliveroo.co.uk/menu/edinburgh/broughton/luxford-burgers-picardy-place), [Sabor](https://deliveroo.co.uk/menu/Edinburgh/broughton/sabor-latin-american-edn) & [Bulked - Loaded Fries](https://deliveroo.co.uk/menu/Edinburgh/broughton/bulked-loaded-fries-edn) (Broughton)
 - [Sprigg - Ingram Street](https://deliveroo.co.uk/menu/glasgow/glasgow-city-centre/sprigg-ingram-st) (Glasgow City Centre)
@@ -95,7 +95,7 @@ To get all of the Editions partners in the UK at any one time we can search Deli
 
 ## Mapping Deliveroo Editions
 
-By searching all of the Deliveroo restaurants delivering to postcodes within each of the UK's ~2900 postcode districts, **238 editions partners** were identified across **53 addresses** and **12 regions**:
+By searching all of the Deliveroo restaurants delivering to postcodes within each of the UK's ~2900 postcode districts, **238 Editions partners** were identified across **53 addresses** and **12 regions**:
 
 ```{python}
 #| echo: false
@@ -124,7 +124,7 @@ plt.show()
 
 ![](assets/wings.jpeg)
 
-London is the region containing the most dark kitchens with 32 editions facilities compared to the 21 locations spread across all other regions of the UK:
+London is the region containing the most dark kitchens with 32 Editions sites compared to the 21 locations spread across all other regions of the UK:
 
 ```{python}
 #| echo: false
@@ -145,7 +145,7 @@ plt.xlabel('No. of Editions Partners')
 plt.show()
 ```
 
-The Editions site with the most partners is in Leeds with 22 vendors under one roof at 1 Scott Hall Street:
+The Editions site with the most partners is in Leeds with 22 partners under one roof at 1 Scott Hall Street:
 
 ```{python}
 #| echo: false
