@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_399b872e5f9a42a28458c81d07dc6a68 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_399b872e5f9a42a28458c81d07dc6a68" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_399b872e5f9a42a28458c81d07dc6a68 = L.map(
+                "map_399b872e5f9a42a28458c81d07dc6a68",
+                {
+                    center: [52.27477484320675, -0.9050307212700421],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_407a838aca1f3a19caa8947ab409988c = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+            var marker_48f0b748168f815b262d469d22314b6b = L.marker(
+                [51.4846234, -0.044459279],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_562d21b6b89473e8686eef6568a0c51e = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_48f0b748168f815b262d469d22314b6b.setIcon(custom_icon_562d21b6b89473e8686eef6568a0c51e);
+        
+    
+        var popup_5d2179e284b6b064e8c32eb07053ba51 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_de42b6d9d0ec1ca99bf8bb48d33124e3 = $(`<div id="html_de42b6d9d0ec1ca99bf8bb48d33124e3" style="width: 100.0%; height: 100.0%;"><h4>Bsy 1 Editions</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/bsy-1-editions/jakobs-kitchen-editions-bsy?day=today&geohash=gcpuyurpq8k1&time=ASAP>Yacob's Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/bsy-1-editions/shake-shack-editions-bsy?day=today&geohash=gcpuyurpq8k1&time=ASAP>Shake Shack – Burgers & Shakes</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/bsy-1-editions/poke-shack-editions-bsy?day=today&geohash=gcpuyurpq8k1&time=ASAP>Poke Shack</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/bsy-1-editions/remedy-kitchen-editions-bsy?day=today&geohash=gcpuyurpq8k1&time=ASAP>Remedy Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/bsy-1-editions/judes-ice-cream-editions-sur?day=today&geohash=gcpuyurpq8k1&time=ASAP>Jude's Ice Cream</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/bsy-1-editions/bleecker-editions-bsy?day=today&geohash=gcpuwvtr0mk9&time=1630>Bleecker Burger</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.4846234,-0.044459279&cbp=11,0,0,0,0>Unit 9, British Wharf, Landmann Way, London, SE145RS</a></div>`)[0];
+                popup_5d2179e284b6b064e8c32eb07053ba51.setContent(html_de42b6d9d0ec1ca99bf8bb48d33124e3);
+            
+        
+
+        marker_48f0b748168f815b262d469d22314b6b.bindPopup(popup_5d2179e284b6b064e8c32eb07053ba51)
+        ;
+
+        
+    
+    
+            var marker_895df4d760aa60faf1138655e6c56851 = L.marker(
+                [51.4831068, -0.0556266],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_05d77b9735673eddbc171f834de81798 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_895df4d760aa60faf1138655e6c56851.setIcon(custom_icon_05d77b9735673eddbc171f834de81798);
+        
+    
+        var popup_9838e5dec64a68d4a696ce6fcb848f26 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_6671748bf53085d5dd080a8376a8ae4a = $(`<div id="html_6671748bf53085d5dd080a8376a8ae4a" style="width: 100.0%; height: 100.0%;"><h4>Bsy 2 Editions</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/bsy-2-editions/dishoom-editions-ber?day=today&geohash=gcpuyurpq8k1&time=ASAP>Dishoom </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/bsy-2-editions/wingstop-editions-ber?day=today&geohash=gcpuyurpq8k1&time=ASAP>WING·STOP</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/bsy-2-editions/tao-tao-ju-carlisle-lane?day=today&geohash=gcpuyurpq8k1&time=ASAP>Tao Tao Ju 陶陶居</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/bsy-2-editions/pho-editions-ber?day=today&geohash=gcpuysr6ce42&time=ASAP>Pho</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.4831068,-0.0556266&cbp=11,0,0,0,0>145 Ormside Street, South Bermondsey, London, SE151TF</a></div>`)[0];
+                popup_9838e5dec64a68d4a696ce6fcb848f26.setContent(html_6671748bf53085d5dd080a8376a8ae4a);
+            
+        
+
+        marker_895df4d760aa60faf1138655e6c56851.bindPopup(popup_9838e5dec64a68d4a696ce6fcb848f26)
+        ;
+
+        
+    
+    
+            var marker_fbc3037d1dda25d21116da9646b5a0e3 = L.marker(
+                [51.44282736, -0.048059682],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_562d70cd1edfbc6b47217d140eda4674 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_fbc3037d1dda25d21116da9646b5a0e3.setIcon(custom_icon_562d70cd1edfbc6b47217d140eda4674);
+        
+    
+        var popup_04f7a04a3b3172c4d7843ebd6dc44936 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_d420d302dfb11a5b14f8de331d9710c2 = $(`<div id="html_d420d302dfb11a5b14f8de331d9710c2" style="width: 100.0%; height: 100.0%;"><h4>Honor Oak Park</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/honor-oak-park/coqfighter-editions-dul?day=today&geohash=gcpuyurpq8k1&time=ASAP>Coqfighter </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/honor-oak-park/zing-zing-editions-dul?geohash=gcpuyurpq8k1>Zing Zing </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/honor-oak-park/popeyes-editions-dul?day=today&geohash=gcpuwvtr0mk9&time=ASAP>Popeyes Louisiana Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/honor-oak-park/dishoom-editions-dul?day=today&geohash=gcpuwvtr0mk9&time=ASAP>Dishoom </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/honor-oak-park/pho-editions-dul?day=today&geohash=gcpumm6sc317&time=1645>Pho</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.44282736,-0.048059682&cbp=11,0,0,0,0>Units 3 & 4 Dulwich Business Centre, Dulwich, London, SE231AG</a></div>`)[0];
+                popup_04f7a04a3b3172c4d7843ebd6dc44936.setContent(html_d420d302dfb11a5b14f8de331d9710c2);
+            
+        
+
+        marker_fbc3037d1dda25d21116da9646b5a0e3.bindPopup(popup_04f7a04a3b3172c4d7843ebd6dc44936)
+        ;
+
+        
+    
+    
+            var marker_f45895d0ea761f3c72973b9ec94355ba = L.marker(
+                [51.47134195, -0.153572684],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_84e1f30c090b590608343f6426b0f95e = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_f45895d0ea761f3c72973b9ec94355ba.setIcon(custom_icon_84e1f30c090b590608343f6426b0f95e);
+        
+    
+        var popup_8c9faf5e2fc2c481091a01dd0d061453 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_91b159d1f0c0a489e4d4cb46d4e3dda6 = $(`<div id="html_91b159d1f0c0a489e4d4cb46d4e3dda6" style="width: 100.0%; height: 100.0%;"><h4>Culvert Place Editions</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/culvert-place-editions/popeyes-editions-bcp?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Popeyes Louisiana Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/culvert-place-editions/the-salad-project-editions-bcp?day=today&geohash=gcpuu3ywj8vv&time=ASAP>The Salad Project </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/culvert-place-editions/bleecker-editions-bqr?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Bleecker Burger</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/culvert-place-editions/hare-and-tortoise-editions-bcp?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Hare & Tortoise</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/culvert-place-editions/dishoom-editions-bcp?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Dishoom </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/culvert-place-editions/tao-tao-ju-editions-bcp?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Tao Tao Ju 陶陶居 </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/culvert-place-editions/judes-ice-cream-bcp?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Jude's Ice Cream</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.47134195,-0.153572684&cbp=11,0,0,0,0>15A Parkfield Industrial Estate, Culvert Place, Battersea, London, SW115BA</a></div>`)[0];
+                popup_8c9faf5e2fc2c481091a01dd0d061453.setContent(html_91b159d1f0c0a489e4d4cb46d4e3dda6);
+            
+        
+
+        marker_f45895d0ea761f3c72973b9ec94355ba.bindPopup(popup_8c9faf5e2fc2c481091a01dd0d061453)
+        ;
+
+        
+    
+    
+            var marker_43f9d055e7b634e7970a3aec842bada3 = L.marker(
+                [51.46972537, -0.178480919],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_db3268d86f618623d31af8d8dabcbc65 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_43f9d055e7b634e7970a3aec842bada3.setIcon(custom_icon_db3268d86f618623d31af8d8dabcbc65);
+        
+    
+        var popup_62e7f6560bbb658c92582c680b1097e2 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_dd4ea9939a6ef5177f600bf8ee8d55d7 = $(`<div id="html_dd4ea9939a6ef5177f600bf8ee8d55d7" style="width: 100.0%; height: 100.0%;"><h4>Battersea York Road</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/jakobs-kitchen-editions-byr-new?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Yacob's Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/motu-indian-kitchen?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Motu Indian Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/the-sushi-kitchen?day=today&geohash=gcpuu3ywj8vv&time=ASAP>The Sushi Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/mindful-chef-editions-byr?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Mindful Chef</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/ben-and-jerrys-store-editions-cla?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Ben & Jerry's Store (Editions Battersea)</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/trip-cbd-store-editions-byr?day=today&geohash=gcpuu3ywj8vv&time=ASAP>TRIP CBD Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/remeo-gelato-editions-byr?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Remeo Gelato</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/the-poke-kitchen?day=today&geohash=gcpuu3ywj8vv&time=ASAP>The Poke Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/tao-village-dim-sum-editions-byr?geohash=gcpuu3ywj8vv>Tao Village Dim Sum</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/barilla-editions-byr?geohash=gcpuu3ywj8vv>Forketta</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/hashtag-editions-byr?geohash=gcpuu3ywj8vv>CANNACOFFEE Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/yun-bento-editions-byr?geohash=gcpuu3ywj8vv>YUN Bento</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/battersea-york-road/remedy-kitchen-editions-byr?day=today&geohash=gcpugcwkyb25&time=ASAP>Remedy Kitchen</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.46972537,-0.178480919&cbp=11,0,0,0,0>Unit 13-15, Heliport Industrial Estate, Battersea, London, SW113SS</a></div>`)[0];
+                popup_62e7f6560bbb658c92582c680b1097e2.setContent(html_dd4ea9939a6ef5177f600bf8ee8d55d7);
+            
+        
+
+        marker_43f9d055e7b634e7970a3aec842bada3.bindPopup(popup_62e7f6560bbb658c92582c680b1097e2)
+        ;
+
+        
+    
+    
+            var marker_370b47bbc010551ab302306f36452f8c = L.marker(
+                [51.47511444, -0.145202461],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_5d161c35583a487502861f223330f8a9 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_370b47bbc010551ab302306f36452f8c.setIcon(custom_icon_5d161c35583a487502861f223330f8a9);
+        
+    
+        var popup_5248f197ee67a1efac9043a0dfaccf06 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_a9284c34fe96b05a79d82a7717dab1e6 = $(`<div id="html_a9284c34fe96b05a79d82a7717dab1e6" style="width: 100.0%; height: 100.0%;"><h4>Queenstown Road</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/queenstown-road/maroush-battersea?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Maroush</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/queenstown-road/marlowes-editions-bqr?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Marlowe's Burgers & Fries</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.47511444,-0.145202461&cbp=11,0,0,0,0>Safestore Car Park, Ingate Place, London, SW83NS, London, SW83NS</a></div>`)[0];
+                popup_5248f197ee67a1efac9043a0dfaccf06.setContent(html_a9284c34fe96b05a79d82a7717dab1e6);
+            
+        
+
+        marker_370b47bbc010551ab302306f36452f8c.bindPopup(popup_5248f197ee67a1efac9043a0dfaccf06)
+        ;
+
+        
+    
+    
+            var marker_2ee890e5379b309656665dafd3ef7355 = L.marker(
+                [51.48194793, -0.144768302],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_78371f62ae2c769cc0972f116eefa650 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_2ee890e5379b309656665dafd3ef7355.setIcon(custom_icon_78371f62ae2c769cc0972f116eefa650);
+        
+    
+        var popup_5b2eebaa7cf2802f6c7287181974c6f9 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_fab0fa23b9afa804a4a81691e1c2a246 = $(`<div id="html_fab0fa23b9afa804a4a81691e1c2a246" style="width: 100.0%; height: 100.0%;"><h4>Nine Elms</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/nine-elms/ahi-poke-editions-cla?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Poke House 🐠</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.48194793,-0.144768302&cbp=11,0,0,0,0>Poke House Unit 201, Turbine Hall Battersea Power Station, Circus Road South, London,, London, SW118EZ</a></div>`)[0];
+                popup_5b2eebaa7cf2802f6c7287181974c6f9.setContent(html_fab0fa23b9afa804a4a81691e1c2a246);
+            
+        
+
+        marker_2ee890e5379b309656665dafd3ef7355.bindPopup(popup_5b2eebaa7cf2802f6c7287181974c6f9)
+        ;
+
+        
+    
+    
+            var marker_431287bc8a10c9e02d391b7ca20c55bc = L.marker(
+                [51.44718795, -0.1973911],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_be4a7e1d6ca2f8200334116407b8a741 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_431287bc8a10c9e02d391b7ca20c55bc.setIcon(custom_icon_be4a7e1d6ca2f8200334116407b8a741);
+        
+    
+        var popup_6fcfdbe751b961e809ef5506535581ed = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_c4e20100fe1af86355163be58b3a8854 = $(`<div id="html_c4e20100fe1af86355163be58b3a8854" style="width: 100.0%; height: 100.0%;"><h4>Wandsworth Editions</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/wandsworth-editions/banh-banh-editions-wnw?day=today&geohash=gcpuu3ywj8vv&time=ASAP>Banh Banh Vietnamese Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/wandsworth-editions/yuma-sushi-editions-wan?day=today&geohash=gcpuu3ywj8vv&time=1645>Yuma Sushi</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/wandsworth-editions/zing-zing-editions-wnw?day=today&geohash=gcpugcwkyb25&time=1745>Zing Zing</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/wandsworth-editions/rajah-rowing-editions-wnw?day=today&geohash=gcpugcwkyb25&time=1645>Rajah Rowing Indian Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/wandsworth-editions/wingstop-wandsworth?day=today&geohash=gcpusu6unsdd&time=ASAP>WING·STOP</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/wandsworth-editions/dishoom-editions-wnw?day=today&geohash=gcpuemxvwjnx&time=ASAP>Dishoom</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/wandsworth-editions/tao-tao-ju-editions-wnw?day=today&geohash=gcpuemxvwjnx&time=ASAP>Tao Tao Ju 陶陶居 </a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.44718795,-0.1973911&cbp=11,0,0,0,0>271 Merton Road, London, SW185JS</a></div>`)[0];
+                popup_6fcfdbe751b961e809ef5506535581ed.setContent(html_c4e20100fe1af86355163be58b3a8854);
+            
+        
+
+        marker_431287bc8a10c9e02d391b7ca20c55bc.bindPopup(popup_6fcfdbe751b961e809ef5506535581ed)
+        ;
+
+        
+    
+    
+            var marker_4fc068819c662a37b0c31291959cd45e = L.marker(
+                [51.5205841, -0.0516174],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_6b5a7777dc7eeefac2af38c62cfa2f88 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_4fc068819c662a37b0c31291959cd45e.setIcon(custom_icon_6b5a7777dc7eeefac2af38c62cfa2f88);
+        
+    
+        var popup_4bf5b5d590067a50124a3c385e592979 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_0ef0c4d8e70d14461567d19ae1ac4f80 = $(`<div id="html_0ef0c4d8e70d14461567d19ae1ac4f80" style="width: 100.0%; height: 100.0%;"><h4>Whitechapel Editions</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/popeyes-editions-wme?day=today&geohash=gcpvpqp8znt2&time=ASAP>Popeyes Louisiana Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/jakobs-kitchen-editions-whi?day=today&geohash=gcpvpqp8znt2&time=ASAP>Yacob's Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/remedy-kitchen-editions-whi?day=today&geohash=gcpvpqp8znt2&time=ASAP>Remedy Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/shu-la-la-editions-whi?day=today&geohash=gcpvpqp8znt2&time=ASAP>So Noodle - 一汤一粉</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/hare-and-tortoise-editions-wme?day=today&geohash=gcpvpqp8znt2&time=ASAP>Hare & Tortoise </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/poke-shack-editions-whi?day=today&geohash=gcpvpqp8znt2&time=ASAP>🌴 Poke Shack - Whitechapel🌴 </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/zzettta-editions-whi?day=today&geohash=gcpvpqp8znt2&time=ASAP>Zzetta - Soul Fired Pizza</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/trip-cbd-store-editions-wme?day=today&geohash=gcpvpqp8znt2&time=ASAP>TRIP CBD Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/remeo-gelato-editions-wme?day=today&geohash=gcpvpqp8znt2&time=ASAP>Remeo Gelato</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/ics-editions-wme-new?day=today&geohash=gcpvpqp8znt2&time=ASAP>Ice Cream Store (Editions Whitechapel)</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/ben-and-jerrys-store-editions-wme?day=today&geohash=gcpvpqp8znt2&time=ASAP>Ben & Jerry's Store (Editions Whitechapel)</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/tao-tao-ju-editions-whi?day=today&geohash=gcpvjrhmqd3y&time=ASAP>Tao Tao Ju 陶陶居 </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/judes-ice-cream-editions-wme-new?day=today&geohash=gcpvjrhmqd3y&time=ASAP>Jude's Ice Cream</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/motu-editions-wme?day=today&geohash=gcpvjrhmqd3y&time=1745>Motu Indian Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/whitechapel-editions/dishoom-shoreditch?day=today&geohash=gcpvnffqn934&time=ASAP>Dishoom</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.5205841,-0.0516174&cbp=11,0,0,0,0>10 Assembly Passage, London, E14UT</a></div>`)[0];
+                popup_4bf5b5d590067a50124a3c385e592979.setContent(html_0ef0c4d8e70d14461567d19ae1ac4f80);
+            
+        
+
+        marker_4fc068819c662a37b0c31291959cd45e.bindPopup(popup_4bf5b5d590067a50124a3c385e592979)
+        ;
+
+        
+    
+    
+            var marker_bd2c42d56ed1cc3cf1c92a263fb6a1b8 = L.marker(
+                [51.52342482, 1.34e-05],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_6dc13cce29f19dc74b1f6d36200069ce = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_bd2c42d56ed1cc3cf1c92a263fb6a1b8.setIcon(custom_icon_6dc13cce29f19dc74b1f6d36200069ce);
+        
+    
+        var popup_62a2499eb3541045c1ebbdb342df1c8a = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_f5f475a117d89d241840d5e27121b0f8 = $(`<div id="html_f5f475a117d89d241840d5e27121b0f8" style="width: 100.0%; height: 100.0%;"><h4>Canning Town Editions</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/dishoom-editions-blw?day=today&geohash=gcpvpqp8znt2&time=ASAP>Dishoom</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/tao-tao-ju-editions-can?day=today&geohash=gcpvpqp8znt2&time=ASAP>Tao Tao Ju 陶陶居 </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/motu-indian-kitchen-blw?day=today&geohash=gcpvpqp8znt2&time=ASAP>Motu Indian Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/wingstop-editions-blw?day=today&geohash=gcpvpqp8znt2&time=ASAP>WING·STOP</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/judes-ice-cream-editions-blw?day=today&geohash=gcpvpqp8znt2&time=ASAP>Jude's Ice Cream</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/ics-editions-blw?day=today&geohash=gcpvpqp8znt2&time=ASAP>Ice Cream Store (Editions Canning Town)</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/mama-li-express?day=tomorrow&geohash=gcpvpqp8znt2&time=1230>Mama Li </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/yun-editions-blw?geohash=gcpvpqp8znt2>YUN Restaurant 云南正宗过桥米线</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/yun-chinese-editions-blw-canary-wharf?geohash=gcpvpqp8znt2>YUN Bento 雲便當</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/b-and-fried-chicken-co-editions-blw?geohash=gcpvpqp8znt2>Beer and Fried Chicken Co.</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/canning-town-editions/the-great-british-cheesecake-company-editions-blw?day=today&geohash=gcpvpqp8znt2&time=ASAP>The Great British Cheesecake Company</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.52342482,1.34e-05&cbp=11,0,0,0,0>Unit 3&4, Galaxy, Crescent Court Business Centre, Canning Town, London, E164TG</a></div>`)[0];
+                popup_62a2499eb3541045c1ebbdb342df1c8a.setContent(html_f5f475a117d89d241840d5e27121b0f8);
+            
+        
+
+        marker_bd2c42d56ed1cc3cf1c92a263fb6a1b8.bindPopup(popup_62a2499eb3541045c1ebbdb342df1c8a)
+        ;
+
+        
+    
+    
+            var marker_4456b301e70d1a707014f4ca1e49fdb1 = L.marker(
+                [51.50702767, -0.026336476],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_0a86e5b3a10d58fa6e1982999ccc6a70 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_4456b301e70d1a707014f4ca1e49fdb1.setIcon(custom_icon_0a86e5b3a10d58fa6e1982999ccc6a70);
+        
+    
+        var popup_17f62182b06f1b803d880ecf07492a80 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_c4c60118b02d1583248d27757203e28b = $(`<div id="html_c4c60118b02d1583248d27757203e28b" style="width: 100.0%; height: 100.0%;"><h4>Canary Wharf</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/canary-wharf/bronsons-burgers-canary-wharf?day=today&geohash=gcpvpqp8znt2&time=ASAP>Bronson’s Burgers</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.50702767,-0.026336476&cbp=11,0,0,0,0>Kitchen 1, Jacuna Kitchens, 105 Cannon Drive, London, E144AS</a></div>`)[0];
+                popup_17f62182b06f1b803d880ecf07492a80.setContent(html_c4c60118b02d1583248d27757203e28b);
+            
+        
+
+        marker_4456b301e70d1a707014f4ca1e49fdb1.bindPopup(popup_17f62182b06f1b803d880ecf07492a80)
+        ;
+
+        
+    
+    
+            var marker_935654e2ac33dae72a1b2dfa5a1f34e5 = L.marker(
+                [51.54339937, -0.114732291],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_d6b74754e880e34c09501caae402f510 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_935654e2ac33dae72a1b2dfa5a1f34e5.setIcon(custom_icon_d6b74754e880e34c09501caae402f510);
+        
+    
+        var popup_25f6f7fa25363f5b1bbe2a88d0e89d11 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_58e2b49cfbbfe45004cc759da16c33bf = $(`<div id="html_58e2b49cfbbfe45004cc759da16c33bf" style="width: 100.0%; height: 100.0%;"><h4>Caledonian Road And Barnsbury</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/caledonian-road-and-barnsbury/chai-naasto-hammersmith?day=today&geohash=gcpvpqp8znt2&time=ASAP>Patri Artisan Street Food and Drinks</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/caledonian-road-and-barnsbury/biryaniwalla?day=today&geohash=gcpvpqp8znt2&time=ASAP>Biryaniwalla</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/caledonian-road-and-barnsbury/rum-and-rice-hammersmith-grove?day=today&geohash=gcpvpqp8znt2&time=ASAP>Rice Bowl Company</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/caledonian-road-and-barnsbury/dishoom-editions-isl?day=today&geohash=gcpvjrhmqd3y&time=ASAP>Dishoom</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/caledonian-road-and-barnsbury/ben-and-jerrys-store-editions-isl?day=today&geohash=gcpvjrhmqd3y&time=ASAP>Ben & Jerry's Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/caledonian-road-and-barnsbury/judes-ice-cream-editions-isl?geohash=gcpvhvg8xzt0>Jude's Ice Cream</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.54339937,-0.114732291&cbp=11,0,0,0,0>Unit 4, 149 Roman Way, London, London, N78XH</a></div>`)[0];
+                popup_25f6f7fa25363f5b1bbe2a88d0e89d11.setContent(html_58e2b49cfbbfe45004cc759da16c33bf);
+            
+        
+
+        marker_935654e2ac33dae72a1b2dfa5a1f34e5.bindPopup(popup_25f6f7fa25363f5b1bbe2a88d0e89d11)
+        ;
+
+        
+    
+    
+            var marker_1e2d31a647de70fe5d71c020194d2720 = L.marker(
+                [51.4085578, -0.1211643],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_2079baff2596d8c8241b6d6ecdcfa08e = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_1e2d31a647de70fe5d71c020194d2720.setIcon(custom_icon_2079baff2596d8c8241b6d6ecdcfa08e);
+        
+    
+        var popup_c7b76eeb2e20d63e28abb3c33b36a6b0 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_b95d7c6b4be8040e7422042c8105de92 = $(`<div id="html_b95d7c6b4be8040e7422042c8105de92" style="width: 100.0%; height: 100.0%;"><h4>South Norbury</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/south-norbury/bronsons-burgers-norbury?day=today&geohash=gcpumm6sc317&time=ASAP>Bronson's Burgers</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.4085578,-0.1211643&cbp=11,0,0,0,0>Pod 19 Unit 5-7 Norbury trading, London, SW164RW</a></div>`)[0];
+                popup_c7b76eeb2e20d63e28abb3c33b36a6b0.setContent(html_b95d7c6b4be8040e7422042c8105de92);
+            
+        
+
+        marker_1e2d31a647de70fe5d71c020194d2720.bindPopup(popup_c7b76eeb2e20d63e28abb3c33b36a6b0)
+        ;
+
+        
+    
+    
+            var marker_3216698704a9b6285266d6730f9acc2f = L.marker(
+                [51.37320421, -0.131343583],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_b481fb265db07ea9b56135382317a134 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_3216698704a9b6285266d6730f9acc2f.setIcon(custom_icon_b481fb265db07ea9b56135382317a134);
+        
+    
+        var popup_5e453ea370a42acc82d2182bc9db2596 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_b37c040292c8caa27d96ae9ac1f8fc0d = $(`<div id="html_b37c040292c8caa27d96ae9ac1f8fc0d" style="width: 100.0%; height: 100.0%;"><h4>Beddington East</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/beddington-east/trip-cbd-store-croydon?day=today&geohash=gcpumm6sc317&time=ASAP>TRIP CBD Store</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.37320421,-0.131343583&cbp=11,0,0,0,0>106 Beddington Lane, London, CR04TB</a></div>`)[0];
+                popup_5e453ea370a42acc82d2182bc9db2596.setContent(html_b37c040292c8caa27d96ae9ac1f8fc0d);
+            
+        
+
+        marker_3216698704a9b6285266d6730f9acc2f.bindPopup(popup_5e453ea370a42acc82d2182bc9db2596)
+        ;
+
+        
+    
+    
+            var marker_2dc947953275b210389c0c1700b104a2 = L.marker(
+                [51.5245604, -0.2304484],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_902e02505483dc85f253231672bb5c03 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_2dc947953275b210389c0c1700b104a2.setIcon(custom_icon_902e02505483dc85f253231672bb5c03);
+        
+    
+        var popup_af72c34862f657e3dc69780e3217cc91 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_32be2703c6e561baec68bb1e2b685a0f = $(`<div id="html_32be2703c6e561baec68bb1e2b685a0f" style="width: 100.0%; height: 100.0%;"><h4>Maida Vale Editions</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/maida-vale-editions/popeyes-editions-mdv?day=today&geohash=gcpv4ezcruym&time=ASAP>Popeyes Louisiana Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/maida-vale-editions/dishoom-kings-cross?day=today&geohash=gcpv4ezcruym&time=ASAP>Dishoom</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/maida-vale-editions/kanada-ya-editions-mdv?day=today&geohash=gcpv4ezcruym&time=ASAP>Kanada-Ya Ramen Bar</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/maida-vale-editions/kkini-editions-mdv?day=today&geohash=gcpv4ezcruym&time=ASAP>KKINI Korean Restaurant</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/maida-vale-editions/mindful-chef-editions-mdv?day=today&geohash=gcpv4ezcruym&time=ASAP>Mindful Chef</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/maida-vale-editions/bleecker-editions-mv?day=today&geohash=gcpv4ezcruym&time=1615>Bleecker Burger</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/maida-vale-editions/yun-bento-editions-mdv?geohash=gcpv4ezcruym>YUN Bento</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/maida-vale-editions/tao-village-dim-sum-editions-mdv?geohash=gcpv4ezcruym>Tao Village Dim Sum</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/maida-vale-editions/the-good-earth-editions-bel?geohash=gcpv4dretwn2>The Good Earth</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.5245604,-0.2304484&cbp=11,0,0,0,0>8, Mitre Way, Mitre Bridge Industrial Estate, W10 6AU, London, W106AU</a></div>`)[0];
+                popup_af72c34862f657e3dc69780e3217cc91.setContent(html_32be2703c6e561baec68bb1e2b685a0f);
+            
+        
+
+        marker_2dc947953275b210389c0c1700b104a2.bindPopup(popup_af72c34862f657e3dc69780e3217cc91)
+        ;
+
+        
+    
+    
+            var marker_f56fb87beb13a655949d35a9420c9b71 = L.marker(
+                [51.50484772, -0.257361141],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_93ffb93d03cb61ae5d9cf2f9768ea25b = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_f56fb87beb13a655949d35a9420c9b71.setIcon(custom_icon_93ffb93d03cb61ae5d9cf2f9768ea25b);
+        
+    
+        var popup_e96357c319ccf61961cd4ff1688e76cf = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_cef8d7be7839ae989d3c13118bc5a6ed = $(`<div id="html_cef8d7be7839ae989d3c13118bc5a6ed" style="width: 100.0%; height: 100.0%;"><h4>Acton Editions</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/acton-editions/remedy-kitchen-editions-act?day=today&geohash=gcpv4ezcruym&time=ASAP>Remedy Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/acton-editions/tao-tao-ju-editions-acton?day=today&geohash=gcpv4ezcruym&time=ASAP>Tao Tao Ju </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/acton-editions/wingstop-editions-act?day=today&geohash=gcpv4ezcruym&time=ASAP>WING·STOP</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/acton-editions/jacobs-kitchen-editions-act?day=today&geohash=gcpv4ezcruym&time=ASAP>Yacob's Kitchen </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/acton-editions/rum-and-rice?day=today&geohash=gcpv4ezcruym&time=ASAP>Rice Bowl Company</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/acton-editions/patri-artisan-street-food-and-drinks?day=today&geohash=gcpv4ezcruym&time=ASAP>Patri Artisan Street Food and Drinks</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/acton-editions/trip-cbd-store-editions-act?day=today&geohash=gcpv4ezcruym&time=ASAP>TRIP CBD Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/acton-editions/the-poke-shack-editions-act?day=today&geohash=gcpv4073pfnr&time=ASAP>🌴 Poke Shack 🌴</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/acton-editions/dishoom-editions-act?day=today&geohash=gcpv4073pfnr&time=ASAP>Dishoom</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/acton-editions/mindful-chef-editions-act?day=today&geohash=gcpv4073pfnr&time=ASAP>Mindful Chef</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.50484772,-0.257361141&cbp=11,0,0,0,0>Unit 33, Acton Park Industrial Estate, London, W37QE</a></div>`)[0];
+                popup_e96357c319ccf61961cd4ff1688e76cf.setContent(html_cef8d7be7839ae989d3c13118bc5a6ed);
+            
+        
+
+        marker_f56fb87beb13a655949d35a9420c9b71.bindPopup(popup_e96357c319ccf61961cd4ff1688e76cf)
+        ;
+
+        
+    
+    
+            var marker_c6176b072fbf44270c4f0d16fa7e5d1d = L.marker(
+                [51.56704439, -0.239066055],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_b371cc39931174403de5aee89dd28fcb = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_c6176b072fbf44270c4f0d16fa7e5d1d.setIcon(custom_icon_b371cc39931174403de5aee89dd28fcb);
+        
+    
+        var popup_82b5691f9c5eb778ff3f8c91b4359d26 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_86dfe58717aa497792c4bcaa7da583d5 = $(`<div id="html_86dfe58717aa497792c4bcaa7da583d5" style="width: 100.0%; height: 100.0%;"><h4>Brent Cross Editions</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/brent-cross-editions/bronsons-burgers-editions-brc?day=today&geohash=gcpv4ezcruym&time=ASAP>Bronson's Burgers </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/brent-cross-editions/tao-tao-ju-editions-brc?day=today&geohash=gcpv4ezcruym&time=1745>Tao Tao Ju 陶陶居 </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/brent-cross-editions/wingstop-editions-brc?day=today&geohash=gcpv6ed34vp4&time=ASAP>WING·STOP</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/brent-cross-editions/mindful-chef-editions-brc?day=today&geohash=gcpv6ed34vp4&time=ASAP>Mindful Chef </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/brent-cross-editions/pho-editions-brc?day=today&geohash=gcpv6q00zbdh&time=1630>Pho</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.56704439,-0.239066055&cbp=11,0,0,0,0>2 Phoenix Industrial Estate Apsley Way, London, NW27LN</a></div>`)[0];
+                popup_82b5691f9c5eb778ff3f8c91b4359d26.setContent(html_86dfe58717aa497792c4bcaa7da583d5);
+            
+        
+
+        marker_c6176b072fbf44270c4f0d16fa7e5d1d.bindPopup(popup_82b5691f9c5eb778ff3f8c91b4359d26)
+        ;
+
+        
+    
+    
+            var marker_247992555143d28955745a8fbd2ff283 = L.marker(
+                [51.4978513, -0.2276068],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_14b52e9f172fb38397180476cd396247 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_247992555143d28955745a8fbd2ff283.setIcon(custom_icon_14b52e9f172fb38397180476cd396247);
+        
+    
+        var popup_86376e9b6a1f33b28877129e4aaf65d2 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_38dfa03adcdd36f8a681e07a375000a3 = $(`<div id="html_38dfa03adcdd36f8a681e07a375000a3" style="width: 100.0%; height: 100.0%;"><h4>Hammersmith</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/hammersmith/biryaniwalla-ealing?day=today&geohash=gcpv4ezcruym&time=ASAP>Biryaniwalla by Patri</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.4978513,-0.2276068&cbp=11,0,0,0,0>103 Hammersmith Grove, London, London, W60NQ</a></div>`)[0];
+                popup_86376e9b6a1f33b28877129e4aaf65d2.setContent(html_38dfa03adcdd36f8a681e07a375000a3);
+            
+        
+
+        marker_247992555143d28955745a8fbd2ff283.bindPopup(popup_86376e9b6a1f33b28877129e4aaf65d2)
+        ;
+
+        
+    
+    
+            var marker_6a890406323ce244062816e0dd09713f = L.marker(
+                [51.55010716, -0.143632771],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_1600921977d2909a171557d62bc458fc = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_6a890406323ce244062816e0dd09713f.setIcon(custom_icon_1600921977d2909a171557d62bc458fc);
+        
+    
+        var popup_18cc52566e7d41734a4119baeab0a491 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_9b100afd83189d76c5a8eb09f7e56fb8 = $(`<div id="html_9b100afd83189d76c5a8eb09f7e56fb8" style="width: 100.0%; height: 100.0%;"><h4>Kentish Town</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/kentish-town/bronsons-burgers-kentish-town?day=today&geohash=gcpvjrhmqd3y&time=ASAP>Bronson's Burgers</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.55010716,-0.143632771&cbp=11,0,0,0,0>Regis Rd, London NW5 3EG, United Kingdom, London, NW53EW</a></div>`)[0];
+                popup_18cc52566e7d41734a4119baeab0a491.setContent(html_9b100afd83189d76c5a8eb09f7e56fb8);
+            
+        
+
+        marker_6a890406323ce244062816e0dd09713f.bindPopup(popup_18cc52566e7d41734a4119baeab0a491)
+        ;
+
+        
+    
+    
+            var marker_e824901dfb0d7f44b96d628a3f784b1c = L.marker(
+                [51.5830431, -0.110714],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_26bb77608746c6f98fdf1915af50f0bf = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_e824901dfb0d7f44b96d628a3f784b1c.setIcon(custom_icon_26bb77608746c6f98fdf1915af50f0bf);
+        
+    
+        var popup_202ff424d71b7fb758426889379a2495 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_182fa24df5a38fca4981f0ac7a098401 = $(`<div id="html_182fa24df5a38fca4981f0ac7a098401" style="width: 100.0%; height: 100.0%;"><h4>Hornsey Station</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/hornsey-station/poke-shack-editions-cre?day=today&geohash=gcpvjrhmqd3y&time=ASAP>Poke Shack</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/hornsey-station/maroush-editions-cre?day=today&geohash=gcpvjrhmqd3y&time=ASAP>Maroush</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/hornsey-station/mindful-chef-editions-cre?day=today&geohash=gcpvjrhmqd3y&time=ASAP>Mindful Chef</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/hornsey-station/pho-editions-cre?day=today&geohash=gcpvjrhmqd3y&time=1645>Pho</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.5830431,-0.110714&cbp=11,0,0,0,0>Unit 21, Cranford Way, London, N89DG</a></div>`)[0];
+                popup_202ff424d71b7fb758426889379a2495.setContent(html_182fa24df5a38fca4981f0ac7a098401);
+            
+        
+
+        marker_e824901dfb0d7f44b96d628a3f784b1c.bindPopup(popup_202ff424d71b7fb758426889379a2495)
+        ;
+
+        
+    
+    
+            var marker_735f6184b9ba54f03858e619c1a6e350 = L.marker(
+                [51.5454314, -0.1771143],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_874cd3cbcf70487332825b15f624976c = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_735f6184b9ba54f03858e619c1a6e350.setIcon(custom_icon_874cd3cbcf70487332825b15f624976c);
+        
+    
+        var popup_e0d02fe623c1f258ef7b4c534f361ca6 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_a430ffe8986d69080889b0c5567ace28 = $(`<div id="html_a430ffe8986d69080889b0c5567ace28" style="width: 100.0%; height: 100.0%;"><h4>Swiss Cottage</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/swiss-cottage/pizza-paradiso-new-college-parade?geohash=gcpvhp0bd462>Pizza Paradiso </a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.5454314,-0.1771143&cbp=11,0,0,0,0>13 New College Parade, London, NW35EP</a></div>`)[0];
+                popup_e0d02fe623c1f258ef7b4c534f361ca6.setContent(html_a430ffe8986d69080889b0c5567ace28);
+            
+        
+
+        marker_735f6184b9ba54f03858e619c1a6e350.bindPopup(popup_e0d02fe623c1f258ef7b4c534f361ca6)
+        ;
+
+        
+    
+    
+            var marker_7f3e6f701a862c12c706a13bb8e343fa = L.marker(
+                [51.58189832, -0.259056358],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_0001c260b1bfbc0b53f3956b1aa72027 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_7f3e6f701a862c12c706a13bb8e343fa.setIcon(custom_icon_0001c260b1bfbc0b53f3956b1aa72027);
+        
+    
+        var popup_9b94fe86af8e81163d615d7198d6cfce = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_315aeb090de0e4a8d3b5f8185e7731d1 = $(`<div id="html_315aeb090de0e4a8d3b5f8185e7731d1" style="width: 100.0%; height: 100.0%;"><h4>West Hendon</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/west-hendon/trip-cbd-store-colindale?day=today&geohash=gcpv6ed34vp4&time=ASAP>TRIP CBD Store</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.58189832,-0.259056358&cbp=11,0,0,0,0>Knightsbridge House, Hool Close, London, NW98XG</a></div>`)[0];
+                popup_9b94fe86af8e81163d615d7198d6cfce.setContent(html_315aeb090de0e4a8d3b5f8185e7731d1);
+            
+        
+
+        marker_7f3e6f701a862c12c706a13bb8e343fa.bindPopup(popup_9b94fe86af8e81163d615d7198d6cfce)
+        ;
+
+        
+    
+    
+            var marker_e4251465487c0b071c0a483a0d829876 = L.marker(
+                [53.53852945, -2.651652675],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_e0dd4f681d4482c666e959fb55cef001 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_e4251465487c0b071c0a483a0d829876.setIcon(custom_icon_e0dd4f681d4482c666e959fb55cef001);
+        
+    
+        var popup_94b7d30b2e464380f4b4d4bab333f723 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_064080aab6a6e6466b0ec802c1c123aa = $(`<div id="html_064080aab6a6e6466b0ec802c1c123aa" style="width: 100.0%; height: 100.0%;"><h4>Sankey</h4><h5>Wigan</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Wigan/sankey/poke-fuzion-warrington?day=today&geohash=gcqpexr9thzp&time=ASAP>Poke Fuzion</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=53.53852945,-2.651652675&cbp=11,0,0,0,0>56 Warrington Road, Wigan, WA52JP</a></div>`)[0];
+                popup_94b7d30b2e464380f4b4d4bab333f723.setContent(html_064080aab6a6e6466b0ec802c1c123aa);
+            
+        
+
+        marker_e4251465487c0b071c0a483a0d829876.bindPopup(popup_94b7d30b2e464380f4b4d4bab333f723)
+        ;
+
+        
+    
+    
+            var marker_f30fecff0ffed7f73b25deddb93d4bfa = L.marker(
+                [53.41813943, -2.324649302],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_f4bb467b1ec3a02a89cb49d318948e85 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_f30fecff0ffed7f73b25deddb93d4bfa.setIcon(custom_icon_f4bb467b1ec3a02a89cb49d318948e85);
+        
+    
+        var popup_279d5241395d3cd8164f3ecde0455f60 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_0c6cda9e61979f56a951317ef206d196 = $(`<div id="html_0c6cda9e61979f56a951317ef206d196" style="width: 100.0%; height: 100.0%;"><h4>Sale</h4><h5>Manchester</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/sale/pasta-evangelists-editions-sal?day=today&geohash=gcqrg7xdxvft&time=ASAP>Pasta Evangelists</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=53.41813943,-2.324649302&cbp=11,0,0,0,0>113 Hope Rd, Sale, Manchester, M333YA</a></div>`)[0];
+                popup_279d5241395d3cd8164f3ecde0455f60.setContent(html_0c6cda9e61979f56a951317ef206d196);
+            
+        
+
+        marker_f30fecff0ffed7f73b25deddb93d4bfa.bindPopup(popup_279d5241395d3cd8164f3ecde0455f60)
+        ;
+
+        
+    
+    
+            var marker_41931c26de74e0b084ea89eb1c0f773b = L.marker(
+                [53.46888407, -2.276106101],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_481f39fce64b4b101e5dbbce658a09f4 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_41931c26de74e0b084ea89eb1c0f773b.setIcon(custom_icon_481f39fce64b4b101e5dbbce658a09f4);
+        
+    
+        var popup_6e2e11e4333721f0c22b1b67c43f86f6 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_ee4bf4d06ce9fe594f053734ab887eb1 = $(`<div id="html_ee4bf4d06ce9fe594f053734ab887eb1" style="width: 100.0%; height: 100.0%;"><h4>Editions Ordsall</h4><h5>Manchester</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/the-athenian-editions-sal?day=today&geohash=gcqrg7xdxvft&time=ASAP>The Athenian - Greek Gyros & Souvlaki </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/luxford-burgers-editions-man?day=today&geohash=gcqrg7xdxvft&time=ASAP>Luxford Burgers</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/nomi-katsu-editions-sal?day=today&geohash=gcqrg7xdxvft&time=ASAP>Nomi Katsu 🇯🇵</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/poke-fuzion-uk?day=today&geohash=gcqrg7xdxvft&time=ASAP>Poke Fuzion by ZUMU</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/sabor-editions-man?day=today&geohash=gcqrg7xdxvft&time=ASAP>Sabor - Latin American</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/bulked-editions-man?day=today&geohash=gcqrg7xdxvft&time=ASAP>Bulked Loaded Fries</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/the-athenian-plant-based-editions-sal?day=today&geohash=gcqrg7xdxvft&time=ASAP>The Athenian - Vegan Greek Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/karate-kid-bento-editions-manchester?day=today&geohash=gcqrg7xdxvft&time=ASAP>Fuji Bento</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/kyn-editions-sal?day=today&geohash=gcqrg7xdxvft&time=ASAP>KYN Pan Asian by ZUMU</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/trip-cbd-store-editions-sal?day=today&geohash=gcqrg7xdxvft&time=ASAP>TRIP CBD Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/wawin-vegan-chinese-manchester?day=today&geohash=gcqrg7xdxvft&time=1645>🌿Wawin Vegan Chinese🌿 </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/proove-editions-sal?day=today&geohash=gcqrg7xdxvft&time=1645>Proove Pizza</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/lower-east-side-editions-sal?day=today&geohash=gcqrg7xdxvft&time=1645>Lower East Side 🍕 New York Style Pizza</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/proovegan-editions-sal?day=today&geohash=gcqrg7xdxvft&time=1645>PROOVegan</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/wingstop-manchester-dk?day=today&geohash=gcw2hjwsdbgp&time=ASAP>WING·STOP</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/zumu-editions?day=today&geohash=gcw2hjwsdbgp&time=ASAP>Zumuku Sushi</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/editions-ordsall/buns-and-wings-editions-sal?geohash=gcw2hjwsdbgp>Buns and Wings</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=53.46888407,-2.276106101&cbp=11,0,0,0,0>Unit 10, Foundry Business Park, Ordsall Lane, Salford, Manchester, M53AN</a></div>`)[0];
+                popup_6e2e11e4333721f0c22b1b67c43f86f6.setContent(html_ee4bf4d06ce9fe594f053734ab887eb1);
+            
+        
+
+        marker_41931c26de74e0b084ea89eb1c0f773b.bindPopup(popup_6e2e11e4333721f0c22b1b67c43f86f6)
+        ;
+
+        
+    
+    
+            var marker_b98ebb55db7c968edf14a15e5195eba7 = L.marker(
+                [52.20846328, 0.148703598],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_0ab6e698c9ab02c9b7ae08e9e17daa16 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_b98ebb55db7c968edf14a15e5195eba7.setIcon(custom_icon_0ab6e698c9ab02c9b7ae08e9e17daa16);
+        
+    
+        var popup_525dc5ac917d7fe782bf8cb2e759994d = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_1d55037e9c80176e33a44bacfa3f5d9e = $(`<div id="html_1d55037e9c80176e33a44bacfa3f5d9e" style="width: 100.0%; height: 100.0%;"><h4>Cambridge Editions</h4><h5>Cambridge</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Cambridge/cambridge-editions/burger-king-editions-cam?day=today&geohash=u12152k2dw2m&time=ASAP>Burger King </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Cambridge/cambridge-editions/dishoom-editions-cam?day=today&geohash=u12152k2dw2m&time=ASAP>Dishoom</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Cambridge/cambridge-editions/poke-fuzion-editions-cam?day=today&geohash=u12152k2dw2m&time=ASAP>Poke Fuzion</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Cambridge/cambridge-editions/nomi-katsu-editions-cam-new?day=today&geohash=u12152k2dw2m&time=ASAP>Nomi Katsu 🇯🇵</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Cambridge/cambridge-editions/zumu-editions-cam?day=today&geohash=u12152k2dw2m&time=ASAP>Zumuku</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Cambridge/cambridge-editions/trip-cbd-store-editions-cam?day=today&geohash=u12152k2dw2m&time=ASAP>Trip CBD Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Cambridge/cambridge-editions/ics-editions-cambridge-new?day=today&geohash=u12152k2dw2m&time=ASAP>Ice Cream Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Cambridge/cambridge-editions/ben-and-jerrys-store-editions-cam?day=today&geohash=u12152k2dw2m&time=ASAP>Ben & Jerry's Store </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Cambridge/cambridge-editions/barilla-editions-cam?geohash=u12152k2dw2m>Forketta</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=52.20846328,0.148703598&cbp=11,0,0,0,0>Deliveroo Editions, Unit 3-4 Restwell House, Coldham's Road, Cambridge, CB13EW</a></div>`)[0];
+                popup_525dc5ac917d7fe782bf8cb2e759994d.setContent(html_1d55037e9c80176e33a44bacfa3f5d9e);
+            
+        
+
+        marker_b98ebb55db7c968edf14a15e5195eba7.bindPopup(popup_525dc5ac917d7fe782bf8cb2e759994d)
+        ;
+
+        
+    
+    
+            var marker_9d6f7b0cb2e673abcac219a6ebe33840 = L.marker(
+                [52.1973277, 0.1454066],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_91ea56a283a7af1fc47a95a82b48d230 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_9d6f7b0cb2e673abcac219a6ebe33840.setIcon(custom_icon_91ea56a283a7af1fc47a95a82b48d230);
+        
+    
+        var popup_8b3c16c26a386c6d04a3ff6d704ed944 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_a7d501fc8de684902f6fb9ad9e5e2edb = $(`<div id="html_a7d501fc8de684902f6fb9ad9e5e2edb" style="width: 100.0%; height: 100.0%;"><h4>Cambridge South</h4><h5>Cambridge</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Cambridge/cambridge-south/pasta-evangelists-editions-cam?day=today&geohash=u12152k2dw2m&time=ASAP>Pasta Evangelists</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=52.1973277,0.1454066&cbp=11,0,0,0,0>230 Mill Rd, Cambridge, Cambridge, CB13NF</a></div>`)[0];
+                popup_8b3c16c26a386c6d04a3ff6d704ed944.setContent(html_a7d501fc8de684902f6fb9ad9e5e2edb);
+            
+        
+
+        marker_9d6f7b0cb2e673abcac219a6ebe33840.bindPopup(popup_8b3c16c26a386c6d04a3ff6d704ed944)
+        ;
+
+        
+    
+    
+            var marker_4a983451690fcddac78d1f51c9419864 = L.marker(
+                [51.5079378, -0.0071843],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_6dd1e8d33ec98a6b234585b03ce1ad8d = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_4a983451690fcddac78d1f51c9419864.setIcon(custom_icon_6dd1e8d33ec98a6b234585b03ce1ad8d);
+        
+    
+        var popup_1ddab07cc2fef768475b13f55dbab5b1 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_8d11f2ee380645c3459d7383d66d91c0 = $(`<div id="html_8d11f2ee380645c3459d7383d66d91c0" style="width: 100.0%; height: 100.0%;"><h4>Blackwall</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/blackwall/ben-and-jerrys-store-editions-blw?geohash=u10j05846jny>Ben & Jerry's Store - Edition - CAT</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/blackwall/lolo-poke-editions-blw?geohash=u10j05846jny>Lolo Poke</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.5079378,-0.0071843&cbp=11,0,0,0,0>Blackwall Car Park, Prestage Way, London, E149QE</a></div>`)[0];
+                popup_1ddab07cc2fef768475b13f55dbab5b1.setContent(html_8d11f2ee380645c3459d7383d66d91c0);
+            
+        
+
+        marker_4a983451690fcddac78d1f51c9419864.bindPopup(popup_1ddab07cc2fef768475b13f55dbab5b1)
+        ;
+
+        
+    
+    
+            var marker_c9be91331a4044a161c59efd5cce84e6 = L.marker(
+                [55.95458817, -3.188241713],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_a2fe087ae80fa83abc6545cbc8fefea8 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_c9be91331a4044a161c59efd5cce84e6.setIcon(custom_icon_a2fe087ae80fa83abc6545cbc8fefea8);
+        
+    
+        var popup_5617bbb1a2bc53ca01b16124827e5b26 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_b834706a5b8bb2a9e865128a81235518 = $(`<div id="html_b834706a5b8bb2a9e865128a81235518" style="width: 100.0%; height: 100.0%;"><h4>New Town</h4><h5>Edinburgh</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Edinburgh/new-town/wingstop-edinburgh?day=today&geohash=gcvwr4jytdk9&time=ASAP>WING·STOP</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=55.95458817,-3.188241713&cbp=11,0,0,0,0>Wingstop, Unit C1. 31, Leith Street Eats Level 1, St James Centre, Edinburgh, Edinburgh, EH13SR</a></div>`)[0];
+                popup_5617bbb1a2bc53ca01b16124827e5b26.setContent(html_b834706a5b8bb2a9e865128a81235518);
+            
+        
+
+        marker_c9be91331a4044a161c59efd5cce84e6.bindPopup(popup_5617bbb1a2bc53ca01b16124827e5b26)
+        ;
+
+        
+    
+    
+            var marker_c8ce547cfbb8ef1df5865dfd02fe4a5e = L.marker(
+                [55.96519075, -3.192487008],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_55d598a86b1e239cfb3675648efee90a = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_c8ce547cfbb8ef1df5865dfd02fe4a5e.setIcon(custom_icon_55d598a86b1e239cfb3675648efee90a);
+        
+    
+        var popup_a34380821e63badc0d95145a1261b11c = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_d88fce2074f49a616fc2d77b6377b881 = $(`<div id="html_d88fce2074f49a616fc2d77b6377b881" style="width: 100.0%; height: 100.0%;"><h4>Broughton</h4><h5>Edinburgh</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Edinburgh/broughton/luxford-burgers-picardy-place?day=today&geohash=gcvwr4jytdk9&time=ASAP>Luxford Burgers</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Edinburgh/broughton/bulked-loaded-fries-edn?day=today&geohash=gcvwr4jytdk9&time=ASAP>Bulked – Loaded Fries</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Edinburgh/broughton/sabor-latin-american-edn?day=today&geohash=gcvwr4jytdk9&time=ASAP>Sabor – Latin American</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=55.96519075,-3.192487008&cbp=11,0,0,0,0>Unit 6, 25 Beaverhall Road, Edinburgh, EH74JE</a></div>`)[0];
+                popup_a34380821e63badc0d95145a1261b11c.setContent(html_d88fce2074f49a616fc2d77b6377b881);
+            
+        
+
+        marker_c8ce547cfbb8ef1df5865dfd02fe4a5e.bindPopup(popup_a34380821e63badc0d95145a1261b11c)
+        ;
+
+        
+    
+    
+            var marker_07f0c1fc4c86233b4ab698005b80f804 = L.marker(
+                [51.64324112, -0.058219486],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_34b3b7a39d881a29b762001e829e5433 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_07f0c1fc4c86233b4ab698005b80f804.setIcon(custom_icon_34b3b7a39d881a29b762001e829e5433);
+        
+    
+        var popup_6c46f53c3666a84cbee4a606e8ec1580 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_38803f41f8317e8015570ea2066af3fc = $(`<div id="html_38803f41f8317e8015570ea2066af3fc" style="width: 100.0%; height: 100.0%;"><h4>Jubilee Park Lee Valley</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/jubilee-park-lee-valley/wingstop-enfield-dk?day=today&geohash=gcpvybj0n01b&time=ASAP>WINGSTOP</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/jubilee-park-lee-valley/bronsons-burgers-editions-plg?day=today&geohash=gcpvybj0n01b&time=ASAP>Bronson’s Burgers</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/jubilee-park-lee-valley/mindful-chef-editions-plg?day=today&geohash=gcpvybj0n01b&time=ASAP>Mindful Chef </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/London/jubilee-park-lee-valley/trip-cbd-store-editions-plg?day=today&geohash=gcpvybj0n01b&time=ASAP>TRIP CBD Store </a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.64324112,-0.058219486&cbp=11,0,0,0,0>Unit 6 Great Cambridge Industrial Estate Lincoln Road, London, EN11SH</a></div>`)[0];
+                popup_6c46f53c3666a84cbee4a606e8ec1580.setContent(html_38803f41f8317e8015570ea2066af3fc);
+            
+        
+
+        marker_07f0c1fc4c86233b4ab698005b80f804.bindPopup(popup_6c46f53c3666a84cbee4a606e8ec1580)
+        ;
+
+        
+    
+    
+            var marker_1aaf241aeaa6236fba26bf704ea7d3d7 = L.marker(
+                [55.8498196, -4.2771164],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_d2879b78367e1ad519ffe3ab47cd8e69 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_1aaf241aeaa6236fba26bf704ea7d3d7.setIcon(custom_icon_d2879b78367e1ad519ffe3ab47cd8e69);
+        
+    
+        var popup_b3bd8b1273015b3d6ac12df9d9013ec7 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_af35519eeaa49645f77365dcdcabfa26 = $(`<div id="html_af35519eeaa49645f77365dcdcabfa26" style="width: 100.0%; height: 100.0%;"><h4>Glasgow Editions</h4><h5>Glasgow</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Glasgow/glasgow-editions/wingstop-editions-glg?day=today&geohash=gcuvwzjhqpyr&time=ASAP>WING·STOP</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Glasgow/glasgow-editions/poke-shack-editions-glg?day=today&geohash=gcuvwzjhqpyr&time=ASAP>The Poke Shack </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Glasgow/glasgow-editions/luxford-burgers-editions-glg?day=today&geohash=gcuvwzjhqpyr&time=ASAP>Luxford Burgers</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Glasgow/glasgow-editions/the-athenian-editions-glasgow?day=today&geohash=gcuvwzjhqpyr&time=ASAP>The Athenian - Greek Gyros & Halloumi Fries</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Glasgow/glasgow-editions/the-athenian-plant-based-editions-glasgow?day=today&geohash=gcuvwzjhqpyr&time=ASAP>The Athenian - Vegan Greek Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Glasgow/glasgow-editions/mindful-chef-editions-glg?day=today&geohash=gcuvwzjhqpyr&time=ASAP>Mindful Chef</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Glasgow/glasgow-editions/sabor-editions-glg?day=today&geohash=gcuvwzjhqpyr&time=ASAP>Sabor - Latin American</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Glasgow/glasgow-editions/bulked-editions-glg?day=today&geohash=gcuvwzjhqpyr&time=ASAP>Bulked - Loaded Fries</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=55.8498196,-4.2771164&cbp=11,0,0,0,0>1-3 Scotland Street, Glasgow, G58JY</a></div>`)[0];
+                popup_b3bd8b1273015b3d6ac12df9d9013ec7.setContent(html_af35519eeaa49645f77365dcdcabfa26);
+            
+        
+
+        marker_1aaf241aeaa6236fba26bf704ea7d3d7.bindPopup(popup_b3bd8b1273015b3d6ac12df9d9013ec7)
+        ;
+
+        
+    
+    
+            var marker_39f50d7657d2e19cb3ae5d7467824d88 = L.marker(
+                [55.8599197, -4.2498102],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_b5da8fb599ffd04f13f4be6eb928b4c7 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_39f50d7657d2e19cb3ae5d7467824d88.setIcon(custom_icon_b5da8fb599ffd04f13f4be6eb928b4c7);
+        
+    
+        var popup_bba2b40ed89dfc4bca833df5c803688c = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_134d0534e57e84cfd6b51171288c5fcd = $(`<div id="html_134d0534e57e84cfd6b51171288c5fcd" style="width: 100.0%; height: 100.0%;"><h4>Glasgow City Centre</h4><h5>Glasgow</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Glasgow/glasgow-city-centre/sprigg-ingram-st?geohash=gcuvwzjhqpyr>Sprigg - Ingram Street</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=55.8599197,-4.2498102&cbp=11,0,0,0,0>241 Ingram St, Glasgow, G11DA</a></div>`)[0];
+                popup_bba2b40ed89dfc4bca833df5c803688c.setContent(html_134d0534e57e84cfd6b51171288c5fcd);
+            
+        
+
+        marker_39f50d7657d2e19cb3ae5d7467824d88.bindPopup(popup_bba2b40ed89dfc4bca833df5c803688c)
+        ;
+
+        
+    
+    
+            var marker_df24da61c821ddbf23de5c1997c3674b = L.marker(
+                [53.8163979, -1.544345],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_26e70440ea40209e551322b3348c1eb2 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_df24da61c821ddbf23de5c1997c3674b.setIcon(custom_icon_26e70440ea40209e551322b3348c1eb2);
+        
+    
+        var popup_3dac5e38089203b557702953a037e05d = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_b003fe9f6aadf461ff9eaa1ae7a11088 = $(`<div id="html_b003fe9f6aadf461ff9eaa1ae7a11088" style="width: 100.0%; height: 100.0%;"><h4>Editions In Leeds</h4><h5>Leeds</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/wingstop-editions-chr?day=today&geohash=gcwfhugpwsj5&time=ASAP>WING·STOP</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/bulked-editions-lee?day=today&geohash=gcwfhugpwsj5&time=ASAP>Bulked Loaded Fries</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/the-athenian-editions-chr?day=today&geohash=gcwfhugpwsj5&time=ASAP>The Athenian | Greek Gyros & Souvlaki</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/zumu-editions-chr?day=today&geohash=gcwfhugpwsj5&time=ASAP>Zumuku Sushi</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/nomi-katsu-editions-chr?day=today&geohash=gcwfhugpwsj5&time=ASAP>Nomi Katsu 🇯🇵</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/poke-fuzion-editions-chr?day=today&geohash=gcwfhugpwsj5&time=ASAP>Poke Fuzion</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/luxford-burgers-editions-lee?day=today&geohash=gcwfhugpwsj5&time=ASAP>Luxford Burgers</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/sabor-editions-lee?day=today&geohash=gcwfhugpwsj5&time=ASAP>Sabor</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/the-athenian-plant-based-editions-chr?day=today&geohash=gcwfhugpwsj5&time=ASAP>The Athenian - Vegan Greek Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/remeo-gelato-editions-chr?day=today&geohash=gcwfhugpwsj5&time=ASAP>Remeo Gelato</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/ben-and-jerrys-store-editions-chr?day=today&geohash=gcwfhugpwsj5&time=ASAP>Ben & Jerry's Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/fuji-bento-editions-chr?day=today&geohash=gcwfhugpwsj5&time=ASAP>Fuji Bento	</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/noodles-inn-editions-chr?day=today&geohash=gcwfhugpwsj5&time=1615>Noodle Inn</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/proove-ltd?day=today&geohash=gcwfhugpwsj5&time=1615>Proove Pizza</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/twisted-kimchi-editions-chr?day=today&geohash=gcwfhugpwsj5&time=1615>Twisted Kimchi</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/lower-east-side-editions-chr?day=today&geohash=gcwfhugpwsj5&time=1615>Lower East Side 🍕 New York Style Pizza</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/awesome-chinese-editions-chr?day=today&geohash=gcwfhugpwsj5&time=1615>Awesome Chinese</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/mr-miyagi-ramen-and-bao-editions-chr?day=today&geohash=gcwfhugpwsj5&time=1615>Mr Miyagi Ramen & Udon 宫城手作拉面+乌冬</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/meatless-miyagi-editions-chr?day=today&geohash=gcwfhugpwsj5&time=1630>Meatless Miyagi	</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/noodle-inn-vegetarian-editions-chr?day=today&geohash=gcwfhugpwsj5&time=1630>Noodle Inn Vegetarian</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/awesome-wings-editions-chr?day=today&geohash=gcwfhugpwsj5&time=1630>Wings 'n Ribs in Wok</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/editions-in-leeds/proovegan-editions-chr?day=today&geohash=gcwfhugpwsj5&time=1615>PROOVegan</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=53.8163979,-1.544345&cbp=11,0,0,0,0>Unit 1, Scott Hall Mills, Scotthall Street, Leeds, LS72HR</a></div>`)[0];
+                popup_3dac5e38089203b557702953a037e05d.setContent(html_b003fe9f6aadf461ff9eaa1ae7a11088);
+            
+        
+
+        marker_df24da61c821ddbf23de5c1997c3674b.bindPopup(popup_3dac5e38089203b557702953a037e05d)
+        ;
+
+        
+    
+    
+            var marker_ae229b88823ac445553f121997095570 = L.marker(
+                [53.79263773, -1.597872801],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_3f66452868356c96f18f7f6662960af7 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_ae229b88823ac445553f121997095570.setIcon(custom_icon_3f66452868356c96f18f7f6662960af7);
+        
+    
+        var popup_c01d95b1dd44eadf111484ffb4f600bd = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_fbd66370edadfbe58e3c23b217111a67 = $(`<div id="html_fbd66370edadfbe58e3c23b217111a67" style="width: 100.0%; height: 100.0%;"><h4>Wortley</h4><h5>Leeds</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Leeds/wortley/pasta-evangelists-leeds?day=today&geohash=gcwfhugpwsj5&time=ASAP>Pasta Evangelists </a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=53.79263773,-1.597872801&cbp=11,0,0,0,0>Jacuna Kitchens, Wortley Moor Road, Leeds, LS124JF</a></div>`)[0];
+                popup_c01d95b1dd44eadf111484ffb4f600bd.setContent(html_fbd66370edadfbe58e3c23b217111a67);
+            
+        
+
+        marker_ae229b88823ac445553f121997095570.bindPopup(popup_c01d95b1dd44eadf111484ffb4f600bd)
+        ;
+
+        
+    
+    
+            var marker_218eca2e3eef7f67863628ec696c51a2 = L.marker(
+                [52.95402989, -1.181565617],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_581fa7cd0a3a155bc6dedea9e655ee26 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_218eca2e3eef7f67863628ec696c51a2.setIcon(custom_icon_581fa7cd0a3a155bc6dedea9e655ee26);
+        
+    
+        var popup_349cdb8cd1a1cfb9206c4c8054ad2ada = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_c9674cdc03d799c40356b811ca7ff77a = $(`<div id="html_c9674cdc03d799c40356b811ca7ff77a" style="width: 100.0%; height: 100.0%;"><h4>Nottingham Editions</h4><h5>Nottingham</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/the-athenian-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=ASAP>The Athenian | Greek Gyros & Souvlaki</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/luxford-burgers-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=ASAP>Luxford Burgers</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/bulked-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=ASAP>Bulked</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/the-athenian-plant-based-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=ASAP>The Athenian - Vegan Greek Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/sabor-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=ASAP>Sabor</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/trip-cbd-store-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=ASAP>TRIP CBD Store </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/ben-and-jerrys-store-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=ASAP>Ben & Jerry's Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/wawin-vegan-chinese-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=1645>WAWIN Vegan Chinese</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/noodle-inn-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=1715>Noodle Inn</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/zumu-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=1530>Zumuku Sushi	</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/nomi-katsu-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=1515>Nomi Katsu 🇯🇵	</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/awesome-chinese-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=1715>Awesome Chinese</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/la-mei-zi-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=1730>La Mei Zi Dim Sum and Sichuan Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/poke-fuzion-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=1515>Poke Fuzion</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/katsu-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=1715>Katsu </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/twisted-kimchi-editions-ntg?geohash=gcrjm0h9b43k>Twisted Kimchi </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/miyagi-bento-and-donburi-editions-ntg?geohash=gcrjm0h9b43k>Miyagi Bento and Donburi</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-editions/remeo-gelato-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=ASAP>Remeo Gelato</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=52.95402989,-1.181565617&cbp=11,0,0,0,0>1 Redwood Court, Faraday Road, Nottingham, NG72BQ</a></div>`)[0];
+                popup_349cdb8cd1a1cfb9206c4c8054ad2ada.setContent(html_c9674cdc03d799c40356b811ca7ff77a);
+            
+        
+
+        marker_218eca2e3eef7f67863628ec696c51a2.bindPopup(popup_349cdb8cd1a1cfb9206c4c8054ad2ada)
+        ;
+
+        
+    
+    
+            var marker_addeb954bd89681c950d9f23d1dcfa8a = L.marker(
+                [52.9579182, -1.165508971],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_441c0ef68525efd98d8289ed21e3c27f = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_addeb954bd89681c950d9f23d1dcfa8a.setIcon(custom_icon_441c0ef68525efd98d8289ed21e3c27f);
+        
+    
+        var popup_8b692d59d7f2881be9994c6cb7b71d1e = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_539bb817a286060c34f87c601d98a918 = $(`<div id="html_539bb817a286060c34f87c601d98a918" style="width: 100.0%; height: 100.0%;"><h4>Nottingham City Centre</h4><h5>Nottingham</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Nottingham/nottingham-city-centre/pasta-evangelists-editions-ntg?day=today&geohash=gcrjm0h9b43k&time=ASAP>Pasta Evangelists</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=52.9579182,-1.165508971&cbp=11,0,0,0,0>100 Alfreton Rd, Radford, Nottingham NG7 3NS, Nottingham, NG73NS</a></div>`)[0];
+                popup_8b692d59d7f2881be9994c6cb7b71d1e.setContent(html_539bb817a286060c34f87c601d98a918);
+            
+        
+
+        marker_addeb954bd89681c950d9f23d1dcfa8a.bindPopup(popup_8b692d59d7f2881be9994c6cb7b71d1e)
+        ;
+
+        
+    
+    
+            var marker_9d965264a2cb3d922a0496ee27dcacff = L.marker(
+                [51.46258518, -0.981253707],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_535386c2a2c5bd187c1ce29e684223ed = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_9d965264a2cb3d922a0496ee27dcacff.setIcon(custom_icon_535386c2a2c5bd187c1ce29e684223ed);
+        
+    
+        var popup_92d62d60191cc5322834bf9e1aec4d6b = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_57ab3addbab0002989ed0cf6db0c990c = $(`<div id="html_57ab3addbab0002989ed0cf6db0c990c" style="width: 100.0%; height: 100.0%;"><h4>Reading Editions</h4><h5>Reading</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Reading/reading-editions/pasta-evangelists-editions-rea?day=today&geohash=gcpkc8mnhkx1&time=ASAP>Pasta Evangelists</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.46258518,-0.981253707&cbp=11,0,0,0,0>49 Milford Road, Reading, RG18LG</a></div>`)[0];
+                popup_92d62d60191cc5322834bf9e1aec4d6b.setContent(html_57ab3addbab0002989ed0cf6db0c990c);
+            
+        
+
+        marker_9d965264a2cb3d922a0496ee27dcacff.bindPopup(popup_92d62d60191cc5322834bf9e1aec4d6b)
+        ;
+
+        
+    
+    
+            var marker_4e2a1dd3a62024235d51f1c52d2cabaa = L.marker(
+                [52.48966706, -1.901911113],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_45bbaaaa13abce1428776eeca10dc620 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_4e2a1dd3a62024235d51f1c52d2cabaa.setIcon(custom_icon_45bbaaaa13abce1428776eeca10dc620);
+        
+    
+        var popup_5fc8b9ec55f3b659b4b0a5d57b7858b5 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_04f18fbf92561041893ece260d082f73 = $(`<div id="html_04f18fbf92561041893ece260d082f73" style="width: 100.0%; height: 100.0%;"><h4>Birmingham City Centre</h4><h5>Birmingham</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Birmingham/birmingham-city-centre/pasta-evangelists-birmingham?day=today&geohash=gcqdsf1b8mmx&time=ASAP>Pasta Evangelists</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=52.48966706,-1.901911113&cbp=11,0,0,0,0>50 St George's Street, Birmingham, B193QU</a></div>`)[0];
+                popup_5fc8b9ec55f3b659b4b0a5d57b7858b5.setContent(html_04f18fbf92561041893ece260d082f73);
+            
+        
+
+        marker_4e2a1dd3a62024235d51f1c52d2cabaa.bindPopup(popup_5fc8b9ec55f3b659b4b0a5d57b7858b5)
+        ;
+
+        
+    
+    
+            var marker_0461bcf0b3230c0c58b147737890d24d = L.marker(
+                [50.8354816, -0.198570102],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_bcf7e294138fb395cad1d5e690edf1d6 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_0461bcf0b3230c0c58b147737890d24d.setIcon(custom_icon_bcf7e294138fb395cad1d5e690edf1d6);
+        
+    
+        var popup_a34fe4f8e362ad84da3e1adb644aee59 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_6afcc97e07831b1486d2787ab6ffac15 = $(`<div id="html_6afcc97e07831b1486d2787ab6ffac15" style="width: 100.0%; height: 100.0%;"><h4>Brighton And Hove Editions</h4><h5>Brighton</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Brighton/brighton-and-hove-editions/poke-shack-editions-bnc?day=today&geohash=gcpc5qr687x2&time=ASAP>🌴 Poke Shack 🌴</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Brighton/brighton-and-hove-editions/the-athenian-editions-bnc-new?day=today&geohash=gcpc5qr687x2&time=ASAP>The Athenian | Greek Gyros & Souvlaki </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Brighton/brighton-and-hove-editions/dishoom-editions-bnc?day=today&geohash=gcpc5qr687x2&time=ASAP>Dishoom</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Brighton/brighton-and-hove-editions/mindful-chef-editions-bnc?day=today&geohash=gcpc5qr687x2&time=ASAP>Mindful Chef </a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Brighton/brighton-and-hove-editions/trip-cbd-store-editions-bnc?day=today&geohash=gcpc5qr687x2&time=ASAP>TRIP CBD Store	</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Brighton/brighton-and-hove-editions/the-athenian-plant-based-editions-bnc-new?day=today&geohash=gcpc5qr687x2&time=ASAP>The Athenian - Vegan Greek Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Brighton/brighton-and-hove-editions/vip-italy-limited-hove?day=today&geohash=gcpc5qr687x2&time=1715>VIP Very Italian Pizza</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=50.8354816,-0.198570102&cbp=11,0,0,0,0>Editions, Unit 1, Saxon Works, Olive Road, Hove, Brighton, BN35LE</a></div>`)[0];
+                popup_a34fe4f8e362ad84da3e1adb644aee59.setContent(html_6afcc97e07831b1486d2787ab6ffac15);
+            
+        
+
+        marker_0461bcf0b3230c0c58b147737890d24d.bindPopup(popup_a34fe4f8e362ad84da3e1adb644aee59)
+        ;
+
+        
+    
+    
+            var marker_fbac51beec3d27c08e02bbbb7431a5f0 = L.marker(
+                [50.8223925, -0.1392495],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_56d563e5cd6d39a9b08a8b6ca2c5643c = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_fbac51beec3d27c08e02bbbb7431a5f0.setIcon(custom_icon_56d563e5cd6d39a9b08a8b6ca2c5643c);
+        
+    
+        var popup_a98058039115b49be9d092ea3fe8c9ce = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_14043f7e703580560688b18a5a7d7491 = $(`<div id="html_14043f7e703580560688b18a5a7d7491" style="width: 100.0%; height: 100.0%;"><h4>Brighton Centre</h4><h5>Brighton</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Brighton/brighton-centre/pokai-brighton?day=today&geohash=gcpc5qr687x2&time=ASAP>Pokai</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=50.8223925,-0.1392495&cbp=11,0,0,0,0>169 North street, Brighton, BN11EA</a></div>`)[0];
+                popup_a98058039115b49be9d092ea3fe8c9ce.setContent(html_14043f7e703580560688b18a5a7d7491);
+            
+        
+
+        marker_fbac51beec3d27c08e02bbbb7431a5f0.bindPopup(popup_a98058039115b49be9d092ea3fe8c9ce)
+        ;
+
+        
+    
+    
+            var marker_e4643e830420ba9b3eda0463bfd96717 = L.marker(
+                [51.4785946, -2.5613584],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_35cc3a003af0b6c5f46b59207710613d = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_e4643e830420ba9b3eda0463bfd96717.setIcon(custom_icon_35cc3a003af0b6c5f46b59207710613d);
+        
+    
+        var popup_fa5714a9e97498da4ee88495577f8127 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_a6ee5d245f7b55f6365520ec36b51c4b = $(`<div id="html_a6ee5d245f7b55f6365520ec36b51c4b" style="width: 100.0%; height: 100.0%;"><h4>Bristol Editions Site</h4><h5>Bristol</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/oowee-diner-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>Oowee Diner</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/kokoro-editions-bristol?day=today&geohash=gcnhvd602txg&time=ASAP>Kokoro: Chicken katsu & sushi</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/wingstop-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>WING·STOP</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/the-athenian-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>The Athenian | Greek Gyros & Souvlaki</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/sushi-shop-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>Sushi Shop</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/koh-thai-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>Koh Thai</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/zumu-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>Zumuku</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/pokai-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>Pokai</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/nomi-katsu-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>Nomi Katsu Editions</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/poke-fusion-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>Poke Fusion</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/the-athenian-plant-based-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>The Athenian - Vegan Greek Kitchen</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/trip-cbd-store-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>TRIP CBD Store</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/bristol-editions-site/mindful-chef-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>Mindful Chef</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.4785946,-2.5613584&cbp=11,0,0,0,0>Unit 1, Glenfrome House, Bristol, BS56XX</a></div>`)[0];
+                popup_fa5714a9e97498da4ee88495577f8127.setContent(html_a6ee5d245f7b55f6365520ec36b51c4b);
+            
+        
+
+        marker_e4643e830420ba9b3eda0463bfd96717.bindPopup(popup_fa5714a9e97498da4ee88495577f8127)
+        ;
+
+        
+    
+    
+            var marker_88915c450a716e79dd13903c6adc8740 = L.marker(
+                [51.46837416, -2.592006141],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_4324db57fc0df983bc334de41ba37c68 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_88915c450a716e79dd13903c6adc8740.setIcon(custom_icon_4324db57fc0df983bc334de41ba37c68);
+        
+    
+        var popup_48baac87a829919a40eca08424b370a0 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_a61644703a67d76e66c0b446df239eca = $(`<div id="html_a61644703a67d76e66c0b446df239eca" style="width: 100.0%; height: 100.0%;"><h4>Montpelier Station</h4><h5>Bristol</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Bristol/montpelier-station/pasta-evangelists-editions-brs?day=today&geohash=gcnhvd602txg&time=ASAP>Pasta Evangelists </a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.46837416,-2.592006141&cbp=11,0,0,0,0>196 Cheltenham Rd, Cotham, Bristol BS6 5RB, Bristol, BS65RB</a></div>`)[0];
+                popup_48baac87a829919a40eca08424b370a0.setContent(html_a61644703a67d76e66c0b446df239eca);
+            
+        
+
+        marker_88915c450a716e79dd13903c6adc8740.bindPopup(popup_48baac87a829919a40eca08424b370a0)
+        ;
+
+        
+    
+    
+            var marker_2bfb47205ea5cc7a9a338de5eb1b957f = L.marker(
+                [51.535643, -0.0219653],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_af910e6d6540ac21e595fa108d4be097 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_2bfb47205ea5cc7a9a338de5eb1b957f.setIcon(custom_icon_af910e6d6540ac21e595fa108d4be097);
+        
+    
+        var popup_8513dee7a2cd5251b06bcb11b00a5488 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_b96bdc1349990cc27d1591d0629bb4b8 = $(`<div id="html_b96bdc1349990cc27d1591d0629bb4b8" style="width: 100.0%; height: 100.0%;"><h4>Fish Island Area</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/fish-island-area/bow-road-express>Alcohol Delivery London- Park Lane</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.535643,-0.0219653&cbp=11,0,0,0,0>Wick Lane, London, E32JG</a></div>`)[0];
+                popup_8513dee7a2cd5251b06bcb11b00a5488.setContent(html_b96bdc1349990cc27d1591d0629bb4b8);
+            
+        
+
+        marker_2bfb47205ea5cc7a9a338de5eb1b957f.bindPopup(popup_8513dee7a2cd5251b06bcb11b00a5488)
+        ;
+
+        
+    
+    
+            var marker_aa2bc3539d88b96ad03ec18a4de18458 = L.marker(
+                [51.42783871, -0.133068823],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_fb689c8651f00469d09e8ed7e34121dd = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_aa2bc3539d88b96ad03ec18a4de18458.setIcon(custom_icon_fb689c8651f00469d09e8ed7e34121dd);
+        
+    
+        var popup_2c8f93fbd6cae3b97c916965cff60ee0 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_9c85f30b53b5d0c10233f0080379ded1 = $(`<div id="html_9c85f30b53b5d0c10233f0080379ded1" style="width: 100.0%; height: 100.0%;"><h4>Balham</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/london/balham/trip-cbd-store-balham>TRIP CBD Store - Balham</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.42783871,-0.133068823&cbp=11,0,0,0,0>25 Mitcham Lane, London, SW166LQ</a></div>`)[0];
+                popup_2c8f93fbd6cae3b97c916965cff60ee0.setContent(html_9c85f30b53b5d0c10233f0080379ded1);
+            
+        
+
+        marker_aa2bc3539d88b96ad03ec18a4de18458.bindPopup(popup_2c8f93fbd6cae3b97c916965cff60ee0)
+        ;
+
+        
+    
+    
+            var marker_462ce17c5c5685efaa06bdc413f90f01 = L.marker(
+                [51.48249872, -0.607392971],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_da0ae479fe52b57245d799786bc0f20c = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_462ce17c5c5685efaa06bdc413f90f01.setIcon(custom_icon_da0ae479fe52b57245d799786bc0f20c);
+        
+    
+        var popup_b3bdf954cfedfb31387a060cd3615b4f = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_b0f3b0d9c8107300530bd3aeaf6b7790 = $(`<div id="html_b0f3b0d9c8107300530bd3aeaf6b7790" style="width: 100.0%; height: 100.0%;"><h4>Windsor And Eton</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/windsor-and-eton/saucybird/>Saucybird - Windsor and Eton</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.48249872,-0.607392971&cbp=11,0,0,0,0>1 Castle Hill, London, SL41PD</a></div>`)[0];
+                popup_b3bdf954cfedfb31387a060cd3615b4f.setContent(html_b0f3b0d9c8107300530bd3aeaf6b7790);
+            
+        
+
+        marker_462ce17c5c5685efaa06bdc413f90f01.bindPopup(popup_b3bdf954cfedfb31387a060cd3615b4f)
+        ;
+
+        
+    
+    
+            var marker_17827e2c1b1f89868708d464691667a0 = L.marker(
+                [51.54295923, -0.175345254],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_74bc69e5f3f82c8eb5a074fe4921553f = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_17827e2c1b1f89868708d464691667a0.setIcon(custom_icon_74bc69e5f3f82c8eb5a074fe4921553f);
+        
+    
+        var popup_3ad79de6ef7b7be3e2bfb0991a547f1b = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_2b51a96e9c875d0177d762d7a28e5bad = $(`<div id="html_2b51a96e9c875d0177d762d7a28e5bad" style="width: 100.0%; height: 100.0%;"><h4>Swiss Cottage Editions</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/swiss-cottage-editions/ben-and-jerrys-store-editions-bel>Ben & Jerry's Store - Swiss Cottage</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.54295923,-0.175345254&cbp=11,0,0,0,0>Rear Unit, 115 Finchley Road, Swiss Cottage, London, NW36HY</a></div>`)[0];
+                popup_3ad79de6ef7b7be3e2bfb0991a547f1b.setContent(html_2b51a96e9c875d0177d762d7a28e5bad);
+            
+        
+
+        marker_17827e2c1b1f89868708d464691667a0.bindPopup(popup_3ad79de6ef7b7be3e2bfb0991a547f1b)
+        ;
+
+        
+    
+    
+            var marker_4a05eaf16db743ed333207041f149216 = L.marker(
+                [51.53518171, -0.13875864],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_ef4c2e0b7737ddfd85cdfc50e8d1abde = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_4a05eaf16db743ed333207041f149216.setIcon(custom_icon_ef4c2e0b7737ddfd85cdfc50e8d1abde);
+        
+    
+        var popup_ed8176a21fe37a95752dd874cafd1365 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_11764f64d9157529d5cf11ae32a89c35 = $(`<div id="html_11764f64d9157529d5cf11ae32a89c35" style="width: 100.0%; height: 100.0%;"><h4>Mornington Crescent South</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/mornington-crescent-south/yun-restaurant-east-central>YUN Restaurant 云南正宗过桥米线 - Camden</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.53518171,-0.13875864&cbp=11,0,0,0,0>14-16 Camden high Street, London, London, NW10JH</a></div>`)[0];
+                popup_ed8176a21fe37a95752dd874cafd1365.setContent(html_11764f64d9157529d5cf11ae32a89c35);
+            
+        
+
+        marker_4a05eaf16db743ed333207041f149216.bindPopup(popup_ed8176a21fe37a95752dd874cafd1365)
+        ;
+
+        
+    
+    
+            var marker_373710b2c6702f0a4b7f36a571c0829b = L.marker(
+                [51.51347865, -0.227783671],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_1663b517e35e514823e4645ace083b77 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_373710b2c6702f0a4b7f36a571c0829b.setIcon(custom_icon_1663b517e35e514823e4645ace083b77);
+        
+    
+        var popup_6301de82d8d055b5f5a2c5b1f80cb854 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_adac08bd26b62e082d5dbc5d3e75affe = $(`<div id="html_adac08bd26b62e082d5dbc5d3e75affe" style="width: 100.0%; height: 100.0%;"><h4>White City Estate</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/London/white-city-estate/fit-food-white-city>Fit Food - White City</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.51347865,-0.227783671&cbp=11,0,0,0,0>Unit 5, Media Works Building, Wood Lane, London, W127TP</a></div>`)[0];
+                popup_6301de82d8d055b5f5a2c5b1f80cb854.setContent(html_adac08bd26b62e082d5dbc5d3e75affe);
+            
+        
+
+        marker_373710b2c6702f0a4b7f36a571c0829b.bindPopup(popup_6301de82d8d055b5f5a2c5b1f80cb854)
+        ;
+
+        
+    
+    
+            var marker_aebba21c9696138771ecb51c79430e1b = L.marker(
+                [51.49848149, -0.272528549],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_171152ac9a6404fd84c949a540e43ae5 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_aebba21c9696138771ecb51c79430e1b.setIcon(custom_icon_171152ac9a6404fd84c949a540e43ae5);
+        
+    
+        var popup_1e59252e25f6015b6f65c96572f2bc0e = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_15c81c34830a74ed78871c2bed4dc9e3 = $(`<div id="html_15c81c34830a74ed78871c2bed4dc9e3" style="width: 100.0%; height: 100.0%;"><h4>South Acton</h4><h5>London</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/london/south-acton/trip-cbd-store-chiswick>TRIP CBD Store - Chiswick</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=51.49848149,-0.272528549&cbp=11,0,0,0,0>6A Greenock Road, Chiswick Park, London, W38DU</a></div>`)[0];
+                popup_1e59252e25f6015b6f65c96572f2bc0e.setContent(html_15c81c34830a74ed78871c2bed4dc9e3);
+            
+        
+
+        marker_aebba21c9696138771ecb51c79430e1b.bindPopup(popup_1e59252e25f6015b6f65c96572f2bc0e)
+        ;
+
+        
+    
+    
+            var marker_ed2a904501a8b17d50c89d87fa7da56e = L.marker(
+                [53.46888407, -2.276106101],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_2fda614bf514692afbc1beb05682b343 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_ed2a904501a8b17d50c89d87fa7da56e.setIcon(custom_icon_2fda614bf514692afbc1beb05682b343);
+        
+    
+        var popup_ca6eb75f38b03fbf2de5daf50f1a999a = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_3a972ac0e96fe9817e0aa05ab4d4bffa = $(`<div id="html_3a972ac0e96fe9817e0aa05ab4d4bffa" style="width: 100.0%; height: 100.0%;"><h4>Salford Crescent</h4><h5>Manchester</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/salford-crescent/halloween-pies-pr-activation-man>Halloween Pies - Salford Crescent</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Manchester/salford-crescent/kelloggs-snacking-store>The Snacking & Breakfast Store</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=53.46888407,-2.276106101&cbp=11,0,0,0,0>Unit 10, Foundry Business Park, Ordsall Lane, Salford, Manchester, M53AN</a></div>`)[0];
+                popup_ca6eb75f38b03fbf2de5daf50f1a999a.setContent(html_3a972ac0e96fe9817e0aa05ab4d4bffa);
+            
+        
+
+        marker_ed2a904501a8b17d50c89d87fa7da56e.bindPopup(popup_ca6eb75f38b03fbf2de5daf50f1a999a)
+        ;
+
+        
+    
+    
+            var marker_bdc030d8a1b11f2d8a2c3dd8697d4107 = L.marker(
+                [50.83385368, -0.139025655],
+                {}
+            ).addTo(map_399b872e5f9a42a28458c81d07dc6a68);
+        
+    
+        var custom_icon_0f7bc72024772a8c15d9ecf91d9d2946 = L.icon({"iconSize": [60, 60], "iconUrl": "https://deliveroo-awards-uae.cdn.prismic.io/deliveroo-awards-uae/906227c4-0fd6-49f1-ab1e-840042ae4bfb_Deliveroo-Editions_Logo_Teal+2.svg"});
+        marker_bdc030d8a1b11f2d8a2c3dd8697d4107.setIcon(custom_icon_0f7bc72024772a8c15d9ecf91d9d2946);
+        
+    
+        var popup_42f8436fcbe59b827dc98991690a53ca = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_f1451680a8f05f13c5e78cd426c5ebf4 = $(`<div id="html_f1451680a8f05f13c5e78cd426c5ebf4" style="width: 100.0%; height: 100.0%;"><h4>Round Hill</h4><h5>Brighton</h5><br>Vendors: <a target="_blank" href=https://deliveroo.co.uk/menu/Brighton/round-hill/lost-boys-chicken>Lost Boys Chicken @ The Joker - Preston</a>, <a target="_blank" href=https://deliveroo.co.uk/menu/Brighton/round-hill/saucybird-brighton>Saucybird - Brighton</a><br><br>Address: <a target="_blank" href=http://maps.google.com/maps?q=&layer=c&cbll=50.83385368,-0.139025655&cbp=11,0,0,0,0>The Joker, 2 Preston Road, Brighton, BN14QF</a></div>`)[0];
+                popup_42f8436fcbe59b827dc98991690a53ca.setContent(html_f1451680a8f05f13c5e78cd426c5ebf4);
+            
+        
+
+        marker_bdc030d8a1b11f2d8a2c3dd8697d4107.bindPopup(popup_42f8436fcbe59b827dc98991690a53ca)
+        ;
+
+        
+    
+</script>
+</html>

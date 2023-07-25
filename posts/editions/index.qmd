@@ -1,0 +1,158 @@
+---
+title: Dark Kitchen Cartography
+author: Sean Greaves
+description: Building a UK-wide map of Deliveroo Editions
+date: '2023-07-24'
+draft: false
+image: assets/cover.png
+categories: [analysis]
+
+---
+
+![](assets/cover.png)
+
+Dedicated sites for preparing takeaway meals for delivery-only known as "dark kitchens" have been widely adopted across the food service industry throughout the past half decade. Dark kitchens enable restaurants to seperate their delivery business from in-house business and operate from non-residential central locations where overhead and operating costs are reduced. Understanding the successes and failures of this service model could provide useful insights into emerging forms of economic planning, risk management, urban design and food distribution. However there is a lack of detailed data on the growth and current state of dark kitchens within the UK.
+
+To the best of our knowledge, a map of the UK's dark kitchen locations does not exist. Therefore we set out to make one for Deliveroo's UK dark kitchen facilities, known as 'Editions', to better understand their growth and current state.
+
+**Disclaimer: all data within this blog post was gathered before Wednesday 19th July 2023.**
+
+<!-- ![](assets/pkl.png) -->
+
+## Locating Editions
+
+
+Deliveroo Editions launched in May 2017 as a concept to put 'an end to postcode food envy'. Initially trialed in Camberwell, Battersea, Dulwich and Canary Wharf, Deliveroo announced there ambition to scale to [30 locations across the UK](https://www.wired.co.uk/article/deliveroo-editions-local-restaurants) within the first year. The Internet Archive's Wayback Machine maintains a capture of the webpage for the original Deliveroo Editions announcement.
+
+![](assets/editions_launch.png)
+
+To find restaurants using Deliveroo's dark kitchens, known as Editions partners, we can add `tags=deliveroo+editions` as a query string when searching for restaurants near a given location. For example to find all the Editions partners delivering to Stepney Green, we can try: `https://deliveroo.co.uk/restaurants/london/stepney-green?fulfillment_method=DELIVERY&tags=deliveroo+editions`:
+
+![](assets/query.png)
+
+If we load the webpage for Popeyes Louisiana Kitchen, we can identify the partner is based at "Whitechapel Editions" from the location name in restaurant's url: `https://deliveroo.co.uk/menu/London/whitechapel-editions/popeyes-editions-wme/?day=today&geohash=gcpvngtckn3c&time=ASAP`. Therefore the address for Popeyes Louisiana Kitchen is also the address for Whitechapel Editions which happens to be 10 Assembly Passage, London, E14UT, a [2-storey B-class office space with a disco ball included built in 1906](https://www.loopnet.co.uk/Listing/10-40-Assembly-Passage-London/8354101/) right next to the busy A11 road into central London.
+
+![](assets/assembly.jpeg)
+
+To find all the other partners based at Whitechapel Editions (`london/whitechapel-editions`), we can search for Editions partners (`tags=deliveroo+editions`) nearby with the following url: `https://deliveroo.co.uk/restaurants/london/whitechapel-editions?fulfillment_method=DELIVERY&tags=deliveroo+editions`. We can deduce that all the restaurants based 0.0 miles away are those at the Editions kitchen and can validate this by checking for `whitechapel-editions` in their urls.
+
+![](assets/whitechapel.png)
+
+Using this approach, we can trawl the Internet Archive for Deliveroo's historic data and explore the possibility of charting the growth of Editions since 2017.
+
+## Historic Editions Data
+
+Deliveroo's website has been archived many times by the Wayback Machine. Some of the captured webpages include search results specific to UK locations with Deliveroo Editions filters. Unfortunately only 46 webpages with Editions search results could be retrieved, each of which was captured between 1 and 5 times over a period of 2 years. This data is likely too sparse to allow for detailed analysis of the growth of Editions in the UK. However the data has some utility in providing an incomplete historic list of Editions partners between 2020 and 2022.
+
+![](assets/wayback.png)
+
+By iterating through every capture extracting the restaurant names, restaurant urls, Editions and timestamps, we can build a dataset of over 500 Editions partners:
+
+```{python}
+#| echo: false
+import pandas as pd
+df = pd.read_csv('data/editions_wayback.csv', usecols=['name','location','timestamps','timestamp_urls','restaurant_url'])
+df.head()
+```
+
+Whilst mapping the growth of Editions with historic data remains an elusive goal, we can look to present day data to build a map of Editions in the UK in its current state.
+
+## Present-Day Editions Data
+
+Many of Deliveroo's well known Editions locations can be found by searching the Food Standards Agency (FSA) for businesses containing "Deliveroo" in their title. Deliveroo [requires its restaurants to have an FSA rating of at least 2](https://help.deliveroo.com/en/articles/3198655-deliveroo-food-hygiene-rating-policy) to use the platform.  Deliveroo advertises Editions as going above and beyond these minimal requirements, [maintaining the highest possible hygiene ratings across all of its sites](https://restaurants.deliveroo.com/en-gb/editions#:~:text=High%2C%20high%20standards,hygiene%20and%20safety). This is a far cry from the poor hygiene practices and lack of regulation associated with the original 'ghost kitchens' of New York that advertised through Grubhub and [attracted media attention in 2015.](https://www.nbcnewyork.com/news/local/seamless-restaurant-grubhub-fake-eatery-unregulated-kitchen-investigation-i-team-new-york-city/2013699/)
+
+![](assets/fsa.png)
+
+We can cross reference 16 of these businesses with Editions locations encountered from searching Deliveroo's site:
+
+```{python}
+#| echo: false
+pd.DataFrame([{'Editions Name': 'bsy-2-editions', 'FSA Business': 'Deliveroo sp ltd', 'Address':  '145 Ormside Street London SE15 1TF'},
+             {'Editions Name': 'honor-oak-park', 'FSA Business': 'Deliveroo SP Ltd', 'Address':  'Units 3-4 Dulwich Business Centre Malham Road Forest Hill'},
+             {'Editions Name': 'culvert-place-editions', 'FSA Business': 'Deliveroo', 'Address':  'Unit 2 Editions Battersea 15a Parkfield Industrial Estate Culvert Place London SW115BA'},
+             {'Editions Name': 'wandsworth-editions', 'FSA Business': 'Deliveroo SP Ltd', 'Address':  'Unit 4 271 Merton Road London SW18 5JS'},
+             {'Editions Name': 'canning-town-editions', 'FSA Business': 'Deliveroo SP Ltd', 'Address':  'Unit 3 Crescent Court Business Centre 4C North Crescent Canning Town E16 4TG'},
+             {'Editions Name': 'maida-vale-editions', 'FSA Business': 'Deliveroo Hop Ltd', 'Address':  'Unit 24 Mitre Bridge Industrial Park Mitre Way London W10 6AU'},
+             {'Editions Name': 'caledonian-road-and-barnsbury', 'FSA Business': 'Deliveroo', 'Address':  'Deliveroo Unit 4 Roman Way Industrial Estate 149 Roman Way Islington'},
+             {'Editions Name': 'brent-cross-editions', 'FSA Business': 'Deliveroo SP Ltd', 'Address':  '2 Phoenix Industrial Estate Apsley Way London NW2 7LN'},
+             {'Editions Name': 'hornsey-station', 'FSA Business': 'Deliveroo SP Ltd', 'Address':  'Unit 21 Cranford Way Hornsey London N8 9DG'},
+             {'Editions Name': 'cambridge-editions', 'FSA Business': 'Deliveroo', 'Address':  'Unit 3-4 Restwell House Coldhams Road Cambridge Cambridgeshire'},
+             {'Editions Name': 'jubilee-park-lee-valley', 'FSA Business': 'Deliveroo SP Ltd', 'Address':  'Unit 6 Great Cambridge Industrial Estate Lincoln Road Enfield'},
+             {'Editions Name': 'glasgow-editions', 'FSA Business': 'Deliveroo SP Ltd', 'Address':  '1 Scotland Street Glasgow G5 8LS'},
+             {'Editions Name': 'editions-in-leeds', 'FSA Business': 'Deliveroo Editions', 'Address':  'Unit 1 Scott Hall Mills Scott Hall Street Meanwood Leeds'},
+             {'Editions Name': 'nottingham-editions', 'FSA Business': 'Deliveroo SP Ltd', 'Address':  'Unit 1 Redwood Court Salisbury Street Nottingham NG7 2BQ'},
+             {'Editions Name': 'brighton-and-hove-editions', 'FSA Business': 'Deliveroo Editions', 'Address':  'Unit 1 Saxon Works 22 Olive Road Hove BN3 7GY'},
+             {'Editions Name': 'bristol-editions-site', 'FSA Business': 'Deliveroo SP Ltd', 'Address':  'Unit 1 Glenfrome House Eastgate Road Eastville Bristol BS5 6XX'}])
+```
+
+However there are many Editions partners that do not operate from any of these addresses. Here is a handful of examples:
+
+- [Luxford Burgers](https://deliveroo.co.uk/menu/edinburgh/broughton/luxford-burgers-picardy-place), [Sabor](https://deliveroo.co.uk/menu/Edinburgh/broughton/sabor-latin-american-edn) & [Bulked - Loaded Fries](https://deliveroo.co.uk/menu/Edinburgh/broughton/bulked-loaded-fries-edn) (Broughton)
+- [Sprigg - Ingram Street](https://deliveroo.co.uk/menu/glasgow/glasgow-city-centre/sprigg-ingram-st) (Glasgow City Centre)
+- [Pasta Evangelists](https://deliveroo.co.uk/menu/Leeds/wortley/pasta-evangelists-leeds) (Wortley)
+
+To get all of the Editions partners in the UK at any one time we can search Deliveroo with a postcode from each of the ~2900 postcode districts in the UK. Whilst this brute force approach is relatively inefficient given that Deliveroo is not operating at most UK postcodes outside of cities and large towns, it does offer a near-complete picture of Deliveroo's operations in the UK and most of the Editions partners.
+
+## Mapping Deliveroo Editions
+
+By searching all of the Deliveroo restaurants delivering to postcodes within each of the UK's ~2900 postcode districts, **238 Editions partners** were identified across **53 addresses** and **12 regions**:
+
+```{python}
+#| echo: false
+from IPython.display import IFrame
+IFrame(src="data/editions_extra.html", width='100%', height='900px')
+```
+
+```{python}
+#| echo: false
+#| scrolled: true
+df = pd.read_csv('data/editions_uk_18_7_23.csv', usecols=['name','location','edition', 'restaurant_url', 'address', 'lat', 'lon'])
+df.head()
+```
+
+Wingstop ([2021 Deliveroo Restaurant of the Year winner](https://deliveroorestaurantawards.com/)), Dishoom ([2021 Deliveroo Best Indian Restaurant winner](https://deliveroorestaurantawards.com/)) and the Athenian appear to be the most scalable partners appearing in 6+ Editions across the UK. Editions sites also include popular partners that don't offer cooked food like the Californian CBD drinks vendors 'Trip CBD Store' and Ben & Jerry's.
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+vendors = df[['name', 'edition']].drop_duplicates().reset_index(drop=True)
+vendors['name'].value_counts().head(10).plot.barh()
+plt.ylabel('Editions Partner')
+plt.xlabel('No. of Editions')
+plt.show()
+```
+
+![](assets/wings.jpeg)
+
+London is the region containing the most dark kitchens with 32 Editions sites compared to the 21 locations spread across all other regions of the UK:
+
+```{python}
+#| echo: false
+kitchen_subset = df[['location', 'edition']].drop_duplicates().reset_index(drop=True)
+kitchen_subset['location'].value_counts().head(12).plot.barh()
+plt.ylabel('Location')
+plt.xlabel('No. of Editions')
+plt.show()
+```
+
+London also offers the greatest choice of Editions partners at 127 compared to the 112 vendors spread across the other Editions sites.
+
+```{python}
+#| echo: false
+df['location'].value_counts().head(10).plot.barh()
+plt.ylabel('Location')
+plt.xlabel('No. of Editions Partners')
+plt.show()
+```
+
+The Editions site with the most partners is in Leeds with 22 partners under one roof at 1 Scott Hall Street:
+
+```{python}
+#| echo: false
+df['edition'].value_counts().head(10).plot.barh()
+plt.ylabel('Editions Title')
+plt.xlabel('No. of Editions Partners')
+plt.show()
+```
+
+![](assets/leeds.png)
