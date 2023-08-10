@@ -1,0 +1,89 @@
+---
+Annotation Guidelines
+---
+A.1 Span Specifications
+---
+1. A skill starts with a VERB, otherwise (ADJECTIVE) + NOUN
+1.1 Modal verbs are not tagged:
+  • Can [put personal touch on the menu]SKILL .
+  • Will [train new staff]SKILL .
+---
+2. Split up phrases with prepositions and/or conjunctions
+2.1 Unless the conjunction coordinates two nouns functioning as one argument:
+  • [Coordinate parties and conferences]SKILL .
+2.2 Do not tag skills with anaphoric pronouns, only tag preceding skill:
+  • [Prioritizing tasks]SKILL and identifying those that are most important.
+2.3 Split nouns and adjectives that are coordinated if they do not have a verb attached:
+  • Be [inquisitive]SKILL and [proactive]SKILL .
+2.4 If there is a listing of skill tags and they lead up to different subtasks, we split them:
+  • [keep up the high level of quality in our team]SKILL through [reviews]SKILL , [pairing]SKILL and [mentoring]SKILL .
+---
+3. If there is relevant information appended after irrelevant information (e.g., info specific to a company)
+we try to make the skill as short as possible:
+  • [providing the best solution]SKILL for Siemens Gamesa in a very [structured]SKILL and [analytic]SKILL manner.
+---
+4. Note also the word skills can be included in the span of the component if leaving it out
+makes it nonsensical:
+  • [personal skills]SKILL → just [personal] would make it nonsensical.
+---
+5. Parentheses after a skill tag are included if they elaborate the component before them or if they are an
+abbreviation of the component.
+---
+6. Inclusion of adverbials in components. Adverbials are included if it concerns the manner of doing
+something. All others are excluded:
+  • like to [solve technical challenges independently]SKILL .
+  • [communicates openly]SKILL .
+  • [striving for the best]SKILL in all that they do.
+  • [Deliver first class customer service]SKILL to our guests.
+  • [Making the right decisions]SKILL early in the process.
+---
+7. Attitudes as skills. We annotate attitudes as a skill:
+  • a [can-do-approach]SKILL → we leave out articles from the attitude.
+8. Attitudes are not tagged if they contain skill/knowledge components—then only the span of the skill is
+tagged.
+  • like to [solve technical challenges independently]SKILL .
+  • enjoy [working in a team]SKILL .
+---
+9. Miscellaneous:
+9.1 Do not tag ironic skills (e.g., lazy).
+9.2 Avoid nesting of skills, annotate it as one span.
+9.3 We annotate all skills that are part of sections such as “requirements”, “good-to-haves”,
+“great-to-knows”, “optionals”, “after this x months of training you’ll be able to...”, “At the job you’re going to...”.
+9.4 When there is a general standard that can be added to the skill, we add these:
+  • [Process payments according to the [...] standards]SKILL .
+---
+
+A.2 Other Specifications
+---
+1. Rule-of-thumb: If in doubt, annotate it as a skill.
+---
+2. We try to keep the skill components as short as possible (i.e., exclude information at the
+end if it makes it too specific for the job).
+---
+3. We do not include “fluff” and “triggers” (i.e., words that indicate a skill component will
+follow: “advanced skills in [...]SKILL ”) around the components, including degree. This goes for
+both before and after:
+  • [Manual handling]SKILL tasks.
+---
+4. Pay attention to expressions such as “participation in...”, “contributing”, and “transfer (knowledge)”.
+These are usually not considered skills.
+  • Contribute to the enjoyable and collaborative work environment.
+  • Participation in the Department’s regular research activities.
+  • Desire to be part of something meaningful and innovative.
+---
+5. Skills components that are found in not-so-straightforward places (e.g., project
+descriptions) are annotated as well, if they relate to the position.
+---
+6. Occupations and positions in companies/academia should be excluded.
+---
+7. If there’s a skill component in the position, we exclude it as well.
+  • Experienced Java Engineer. → completely untagged.
+---
+8. Only annotate the skills that are related to the position.
+8.1. This includes skills that are specific for the position as well (e.g., skills of a ruminants
+professor versus math professor).
+8.2 Also skills that the person for the position is expected to do in the future.
+8.3 This does not include skills describing only the company, the group you will
+join in the department, and so on. Only annotate if it is specified or implied that the employee should
+possess the skill as well.
+---
