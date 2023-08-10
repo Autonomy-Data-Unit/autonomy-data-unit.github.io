@@ -8,7 +8,7 @@
 
 <meta name="author" content="Sean Greaves">
 <meta name="dcterms.date" content="2023-08-10">
-<meta name="description" content="Fine-Tuning &amp; Prompt Design with Hugging Face and OpenAI">
+<meta name="description" content="Prompt design and fine-tuning models with Hugging Face and OpenAI">
 
 <title>ADU blog - Skills Extraction with Large Language Models</title>
 <style>
@@ -140,13 +140,13 @@ cookieconsent.run({
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="ADU blog - Skills Extraction with Large Language Models">
-<meta property="og:description" content="Fine-Tuning &amp; Prompt Design with Hugging Face and OpenAI">
+<meta property="og:description" content="Prompt design and fine-tuning models with Hugging Face and OpenAI">
 <meta property="og:image" content="https://data.autonomy.work/posts/skills/assets/linkedin.png">
 <meta property="og:site-name" content="ADU blog">
 <meta property="og:image:height" content="802">
 <meta property="og:image:width" content="1791">
 <meta name="twitter:title" content="ADU blog - Skills Extraction with Large Language Models">
-<meta name="twitter:description" content="Fine-Tuning &amp; Prompt Design with Hugging Face and OpenAI">
+<meta name="twitter:description" content="Prompt design and fine-tuning models with Hugging Face and OpenAI">
 <meta name="twitter:image" content="https://data.autonomy.work/posts/skills/assets/linkedin.png">
 <meta name="twitter:image-height" content="802">
 <meta name="twitter:image-width" content="1791">
@@ -215,7 +215,7 @@ cookieconsent.run({
       <h1 class="title">Skills Extraction with Large Language Models</h1>
                   <div>
         <div class="description">
-          Fine-Tuning &amp; Prompt Design with Hugging Face and OpenAI
+          Prompt design and fine-tuning models with Hugging Face and OpenAI
         </div>
       </div>
                           <div class="quarto-categories">
@@ -277,8 +277,8 @@ cookieconsent.run({
 </div>
 <section id="token-classification" class="level2">
 <h2 class="anchored" data-anchor-id="token-classification">1. Token Classification</h2>
-<p>Skills extraction can be approached as a named entity recognition task where we train models to label sequences of words within a sentence as denoting skills. This approach does require quality labelled datasets that can be time-consuming to build and difficult to source. The highest quality open dataset we could get our hands on is <a href="https://github.com/kris927b/SkillSpan">‘Skillspan’</a> from Zhang et al.&nbsp;(2022) consisting of 265 annotated English language job profiles (14.5K sentences and over 12.5K annotated spans) for hard and soft skills. This excellent resource is released alongside a codebase and paper <a href="https://arxiv.org/abs/2204.12811">‘SkillSpan: Hard and Soft Skill Extraction from Job Postings’</a> in which the researchers report performance benchmarks for several transformer models fine-tuned on SkillSpan. Furthermore, the paper includes the extensive annotation guidelines used by the researchers to label the SkillSpan dataset, giving an insight into how time-consuming this task most likely was.</p>
-<p>The data in SkillSpan is seperated into sentences labelled in the CoNNL format which for an example sentence can take this form:</p>
+<p>Skills extraction can be approached as a named entity recognition task where we train models to label sequences of words that correspond to skills. This approach does require quality labelled datasets that can be time-consuming to build and difficult to source. The highest quality open dataset with skill annotations that we could get our hands on is <a href="https://github.com/kris927b/SkillSpan">‘Skillspan’</a> from Zhang et al.&nbsp;(2022) consisting of 265 annotated English language job profiles (14.5K sentences and over 12.5K annotated spans) for hard and soft skills. This excellent resource is released alongside a codebase and paper <a href="https://arxiv.org/abs/2204.12811">‘SkillSpan: Hard and Soft Skill Extraction from Job Postings’</a> in which the researchers report performance benchmarks for several transformer models fine-tuned on SkillSpan. Furthermore, the paper includes the extensive annotation guidelines used by the researchers to label the SkillSpan dataset, giving an insight into how time-consuming this task most likely was.</p>
+<p>The data in SkillSpan is seperated into sentences labelled in the CoNNL format which looks like this:</p>
 <table class="table">
 <thead>
 <tr class="header">
@@ -321,7 +321,7 @@ cookieconsent.run({
 </tr>
 <tr class="odd">
 <td>,</td>
-<td>0</td>
+<td>O</td>
 </tr>
 <tr class="even">
 <td>mentoring</td>
@@ -337,7 +337,7 @@ cookieconsent.run({
 </tr>
 <tr class="odd">
 <td>and</td>
-<td>0</td>
+<td>O</td>
 </tr>
 <tr class="even">
 <td>presenting</td>
@@ -353,11 +353,11 @@ cookieconsent.run({
 </tr>
 </tbody>
 </table>
-<p>Words are labelled ‘O’ if they are not part of a skill. The first word in a sequence of words denoting a skill is labelled <code>B-Skill</code> (b for beginning) and all proceeding words labelled <code>I-Skill</code>.</p>
+<p>Words are labelled ‘O’ if they are not part of a skill. The first word in a skill sequence is labelled <code>B-Skill</code> (b for beginning) and all proceeding words labelled <code>I-Skill</code>.</p>
 <p>When shopping for model architectures that might yield the best performance when fine-tuned on SkillSpan, we could look to roughly comparable datasets such as CoNLL 2003 and recent performance benchmarks. Models building on the BERT/RoBERTa architectures <a href="https://paperswithcode.com/sota/token-classification-on-conll2003">seem to do particularly well</a> at entity recognition. This is because they are designed for bidirectional context understanding; understanding a word or phrase in the context of all the other words and phrases that surround it in a sentence. This is different to models like GPT-3/GPT-4 which are designed for unidirectional context understanding (left-to-right) which makes them excellent at generating human-like text but less effective at entity extraction out-the-box. We will attempt to benchmark SkillSpan on BERT and RoBERTa to see how feasible it is to fine-tune excellent skill extractors on consumer hardware with open data.</p>
 <section id="training-and-testing" class="level3">
 <h3 class="anchored" data-anchor-id="training-and-testing">Training and Testing</h3>
-<p>We attempt to fine-tune BERT and RoBERTa on part of the SkillSpan dataset and compare performance with <a href="https://huggingface.co/jjzha/jobbert_skill_extraction">‘JobBert’</a>, a model released by the SkillSpan researchers pre-trained on 3.2M unlabeled job profile sentences. We fine-tuned our models on a V100 GPU (P3.2xlarge AWS EC2 instance) using a basic <a href="https://github.com/Autonomy-Data-Unit/llm-skills-extraction">NBDev workflow</a>. To access performance of the models, we <a href="https://github.com/Autonomy-Data-Unit/llm-skills-extraction/blob/main/nbs/run/run_04_evaluate.ipynb">evaluate each on two test sets from each dataset</a>, namely job profiles from HOUSE and TECH (job profiles from StackOverflow):</p>
+<p>We attempt to fine-tune BERT and RoBERTa on part of the SkillSpan dataset and compare performance with <a href="https://huggingface.co/jjzha/jobbert_skill_extraction">‘JobBert’</a>, a model released by the SkillSpan researchers pre-trained on 3.2M unlabeled job profile sentences. We fine-tuned our models on a V100 GPU (P3.2xlarge AWS EC2 instance) using a basic <a href="https://github.com/Autonomy-Data-Unit/llm-skills-extraction">NBDev workflow</a>. To access performance of the models, we <a href="https://github.com/Autonomy-Data-Unit/llm-skills-extraction/blob/main/nbs/run/run_04_evaluate.ipynb">evaluate them on the two open SkillSpan test sets</a> known as HOUSE and TECH (comprised of job profiles from StackOverflow):</p>
 <table class="table">
 <colgroup>
 <col style="width: 10%">
@@ -419,20 +419,19 @@ cookieconsent.run({
 </tr>
 </tbody>
 </table>
-<p>We notice a clear difference in performance between the subsets with RoBERTa outperforming on TECH and RoBERTa/JobBert performing better than BERT on HOUSE. RoBERTa achieves higher precision on both sets. RoBERTa’s optimizations, like training on a larger corpus of text and using dynamic masking may have contributed to tangible improvements over the original BERT architectures. Differences in performance between JobBERT and BERT may be due to JobBERT being trained on a more relevant dataset of job profiles and fine-tuned on the full SkillSpan dataset compared to the 2 open-source subsets of SkillSpan our models were fine-tuned on.</p>
-<p>To get a sense of how these models perform on job ads we might scrape from the internet in the future, we can test them on an <a href="https://web.archive.org/web/20230806033102/https://jobs.lever.co/Anthropic/e3cde481-d446-460f-b576-93cab67bd1ed">SF-based role in the emerging economically lucractive role of ‘Prompt Engineer’</a>:</p>
+<p>We notice a clear difference in performance between the subsets with RoBERTa outperforming on TECH and RoBERTa/JobBert performing better than BERT on HOUSE. RoBERTa achieves higher precision on both sets; getting a greater proportion of it’s labels correct. RoBERTa’s optimizations relative to JobBERT/BERT include training on a larger corpus of text and the use of dynamic masking which may have contributed to tangible improvements over the original BERT architectures. Differences in performance between JobBERT and BERT may be due to JobBERT being trained on a more relevant dataset of job profiles and fine-tuned on the full SkillSpan dataset compared to the 2 open-source subsets of SkillSpan our models were fine-tuned on.</p>
+<p>To get a sense of how these models perform on job ads we might scrape from the internet in the future, we can test them on an example. Lets check out an <a href="https://web.archive.org/web/20230806033102/https://jobs.lever.co/Anthropic/e3cde481-d446-460f-b576-93cab67bd1ed">ad for an SF-based role in the emerging economically lucractive discipline of so-called prompt engineering</a>:</p>
 <p><img src="assets/anthropic.png" class="img-fluid"></p>
-<p>We can easily load our trained models from the Hugging Face Hub and test them on the full job profile by feeding each sentence to the model individually, similar to how the model was trained. We then print all the sentences where words were labelled. Lets give our fine-tuned RoBERTa model a try:</p>
+<p>We can easily load our trained models from the Hugging Face Hub and test them on the full job profile by feeding each sentence to the model individually (similar to how the model was trained). We then print all the sentences where words were labelled. RoBERTa generated the following labels:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> pipeline</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>token_classifier <span class="op">=</span> pipeline(</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"token-classification"</span>, model<span class="op">=</span><span class="st">"autosyrup/roberta"</span>, tokenizer<span class="op">=</span><span class="st">"autosyrup/roberta"</span>,</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    ignore_labels<span class="op">=</span>[<span class="st">'O'</span>]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>roberta_results <span class="op">=</span> run_inference_hf(sentences, token_classifier)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>display_inference_results(roberta_results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
 <div class="cell-output cell-output-display">
 <div style="background-color: #333333; color: #FFFFFF;">You will figure out the best methods of prompting our AI to accomplish a wide range of tasks, then document these methods to build up a library of tools and a set of tutorials that allows others to learn prompt engineering, as well as <span style="background-color: #C99E39;">work with high value partners</span> to directly solve their challenges.<br></div>
 </div>
@@ -480,15 +479,14 @@ cookieconsent.run({
 <div style="background-color: #333333; color: #FFFFFF;">You stay up-to-date and informed by <span style="background-color: #C99E39;">taking an active interest in emerging research and industry trends</span>.<br></div>
 </div>
 </div>
-<p>We can see RoBERTa has identified 24 skills in 15/59 sentences that make up the job ad. The results seem sensible and cover almost all of the skills we might identify in the <a href="https://web.archive.org/web/20230806033102/https://jobs.lever.co/Anthropic/e3cde481-d446-460f-b576-93cab67bd1ed">original ad</a>. We can test the similarly capable JobBERT model to see how it compares with RoBERTa (<strong>3 seconds ERT</strong>):</p>
+<p>We can see RoBERTa has identified 24 skills in 15/59 sentences that make up the job ad. The results seem sensible and cover almost all of the skills we might identify in the <a href="https://web.archive.org/web/20230806033102/https://jobs.lever.co/Anthropic/e3cde481-d446-460f-b576-93cab67bd1ed">original ad</a>. We can test the similarly capable JobBERT model to see how it compares with RoBERTa:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>token_classifier <span class="op">=</span> pipeline(</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"token-classification"</span>, model<span class="op">=</span><span class="st">"jjzha/jobbert_skill_extraction"</span>, tokenizer<span class="op">=</span><span class="st">"jjzha/jobbert_skill_extraction"</span>,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    ignore_labels<span class="op">=</span>[<span class="st">'O'</span>]</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>jobbert_results <span class="op">=</span> run_inference_hf(sentences, token_classifier)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>display_inference_results(jobbert_results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
 <div class="cell-output cell-output-display">
 <div style="background-color: #333333; color: #FFFFFF;">You will <span style="background-color: #C99E39;">figure out the best methods of prompting our AI</span> to <span style="background-color: #C99E39;">accomplish a wide range of tasks</span>, then document these methods to <span style="background-color: #C99E39;">build</span> up a library of tools and a set of tutorials that allows others to learn prompt engineering, as well as <span style="background-color: #C99E39;">work with high value partners</span> to directly solve their challenges.<br></div>
 </div>
@@ -536,7 +534,7 @@ cookieconsent.run({
 <div style="background-color: #333333; color: #FFFFFF;">As such, we greatly value <span style="background-color: #C99E39;">communication</span> skills.<br></div>
 </div>
 </div>
-<p>Both models label the same 14 sentences out of the 59 that make up the job profile, only differing on several labels. If we include BERT’s inference results, there are at least 26 spans labelled by 2 of the 3 models (<strong>3 seconds ERT</strong>):</p>
+<p>Both models label the same 14 sentences out of the 59 that make up the job profile, only differing on several labels. If we include BERT’s inference results, there are at least 26 common spans labelled by 2 of the 3 models:</p>
 <div class="cell">
 <div class="cell-output cell-output-display">
 <pre><code>{'Build a set of tutorials and interactive tools',
@@ -568,12 +566,12 @@ cookieconsent.run({
 </div>
 </div>
 <p>This list of commonly labelled spans suggests it can be advantageous aggregating the inference results from multiple models in a pipeline to filter out some of the lower quality labels (in this case labels like <code>build</code> or the unfinished <code>Think creatively about the risks and benefits of new</code>).</p>
-<p>Whilst auto-encoding transformer models like BERT are theoretically best suited for skills extraction, it is possible to fine-tune or prompt auto-regressive models like GPT-3/GPT-4 for the task. We will now test these much larger models and explore their potential as skills extractors.</p>
+<p>Whilst auto-encoding transformer models like BERT are theoretically best suited for skills extraction, lets now explore how we can fine-tune and prompt auto-regressive models like GPT-3/GPT-4 into labelling skills.</p>
 </section>
 <section id="fine-tuning-gpt-3" class="level3">
 <h3 class="anchored" data-anchor-id="fine-tuning-gpt-3">2. Fine-tuning GPT-3</h3>
-<p>At present their are two approaches to guiding OpenAI’s LLMs towards a user-defined task: prompt design and fine-tuning. Prompt design is obviously much more accessible and familiar. It doesn’t neccesarily require a dataset, data preprocessing or interaction via API. Fine-tuning however can lead to potentially higher quality results and allows us to save costs on inference by not needing to waste precious tokens explaining the task or desired output format to our model via elaborate or sprawling prompts. Fine-tuning is also pretty straightforward and not very expensive as we will demonstrate.</p>
-<p>Compared to the fine-tuning we previously conducted with BERT, fine-tuning GPT-3 is easier. We don’t need to specify the task, select the best model architecture (other than which version of GPT-3 to fine-tune: <code>davinci</code>, <code>ada</code>, <code>babbage</code> or <code>curie</code>) or install anything (other than <code>openai</code>). We just need to provide a dataset and optional hyper-parameters via the OpenAI API. Through few shot learning LLMs can infer the task we are training them for, which in the case of entity extraction is similar to language transformation tasks.</p>
+<p>At present their are two approaches to guiding OpenAI’s LLMs towards a user-defined task: prompt design and fine-tuning. Prompt design is more accessible; it doesn’t neccesarily require a dataset, data preprocessing or interaction via API. Fine-tuning however can lead to potentially higher quality results and allows us to save costs on inference by removing the need to repeatedly waste tokens explaining the task or desired output format to a model via elaborate or sprawling prompts. Fine-tuning is also pretty straightforward and not very expensive as we will demonstrate.</p>
+<p>Compared to the fine-tuning we previously conducted with BERT, fine-tuning GPT-3 is easier. We don’t need to specify the task, select the best model architecture (other than which version of GPT-3 to fine-tune: <code>davinci</code>, <code>ada</code>, <code>babbage</code> or <code>curie</code>) or install anything (other than the <code>openai</code> python package). We just need to provide a dataset and optional hyper-parameters via the OpenAI API. Through few shot learning LLMs can infer the task we are training them for, which in the case of entity extraction is similar to language transformation tasks.</p>
 <p>To prepare our dataset for fine-tuning OpenAI recommends we build a <code>.jsonl</code> file with each line containing a sentence from SkillSpan with the sentence as the value for ‘prompt’ and the labels (seperated with line break characters <code>\n</code>) as the values for ‘completion’ like so:</p>
 <pre><code>{
     "prompt": "You will be doing this by finding the right partners and building a program to acquire new customers for these markets Develop global partnerships with leading European and South African wineries\n\n###\n\n",
@@ -611,7 +609,7 @@ cookieconsent.run({
 </div>
 <p>In our testing, fine-tuned GPT-3 correctly labelled <code>debug issues in a full stack environment</code>.</p>
 <p>Despite the model labelling this result correctly, it is still vulnerable to returning text that doesn’t match any substrings within the input sentence. GPT-3 is not deterministic (like BERT) so we could in theory get a different result each time. The fine-tuned model can return results containing capital letters, punctuation and even words that didn’t occur in the input sentence- in other words partially hallucinated skills. We notice this can happen more frequently when setting the optional temperature parameter higher (values between 0.0 and 2.0), which corresponds with the model attempting to be more ‘creative’ in its output at the expense of being deterministic and focussed.</p>
-<p>We apply post-processing steps on the output text, converting it to a list of labels and then attempting to find the index range in the original sentence where the label occurs. For instances where an exact match cannot be found we use an implementation of thee Ratcliff/Obershelp algorithm to perform fuzzy matching. By matching GPT-3’s labels with the original sentences we can actually score the Davinci model using <code>seqeval</code>. We report the following metrics:</p>
+<p>We apply post-processing steps on the output text, converting it to a list of labels and then attempting to find the index range in the original sentence where the label occurs. For instances where an exact match cannot be found we use an implementation of the Ratcliff/Obershelp algorithm to perform fuzzy matching. By matching GPT-3’s labels with the original sentences we can actually score the Davinci model using <code>seqeval</code>. We report the following metrics:</p>
 <table class="table">
 <colgroup>
 <col style="width: 13%">
@@ -646,7 +644,7 @@ cookieconsent.run({
 </tbody>
 </table>
 <p>It is surprising and impressive to see GPT-3 is able to perform this task with any competancy, achieving similar precision to BERT, given that the model is inferring the task entirely from the dataset and is approaching token classification as sequence prediction.</p>
-<p>If we test fine-tuned GPT-3 on the original ‘Prompt Engineer’ job posting we notice the model does identify some of the same labels as the BERT models but also misses a number of key skills and labels incomplete skills (‘active’, ‘provide’, ‘accomplish a’ and ‘build up’):</p>
+<p>If we test fine-tuned GPT-3 on the original ‘Prompt Engineer’ job posting we notice the model does identify some of the same labels as the BERT models but also misses a number of key skills and labels incompletely (<code>active</code>, <code>provide</code>, <code>accomplish a</code> and <code>build up</code> are some of the more lacklustre labels):</p>
 <div class="cell">
 <div class="cell-output cell-output-display">
 <div style="background-color: #333333; color: #FFFFFF;">However, large language models are a new type of intelligence, and the art of <span style="background-color: #C99E39;">instructing</span> them in a way that delivers the best results is still in its infancy — it’s a hybrid between <span style="background-color: #C99E39;">programming</span>, instructing, and <span style="background-color: #C99E39;">teaching</span>.<br></div>
@@ -704,7 +702,7 @@ cookieconsent.run({
 <div style="background-color: #333333; color: #FFFFFF;">As such, we greatly value <span style="background-color: #C99E39;">communication skills</span>.<br></div>
 </div>
 </div>
-<p>We look forward to running more experiments with other GPT-3 models on a range of hyper-parameters and in time GPT-4. We now turn to explore ways in which we can productively prompt OpenAI’s LLMs to extract skills with varying levels of explainability.</p>
+<p>We look forward to running more experiments with other GPT-3 models on a range of hyper-parameters and in time GPT-4. We now turn to explore ways in which we can productively prompt OpenAI’s LLMs to extract skills.</p>
 </section>
 <section id="prompt-design-with-gpt-3.5-and-gpt-4" class="level3">
 <h3 class="anchored" data-anchor-id="prompt-design-with-gpt-3.5-and-gpt-4">3. Prompt Design with GPT-3.5 and GPT-4</h3>
@@ -716,11 +714,11 @@ cookieconsent.run({
 <p>Thanks to OpenAI’s API and python library, we can chain together prompts to guide LLMs to output labelled spans with relative ease. The example prompt chain we want to build is two step:</p>
 <ol type="1">
 <li><p>identify if a sentence from a job profile mentions any skills</p></li>
-<li><p>extract skills from sentence that mentions skills</p></li>
+<li><p>extract skills from the sentence that mentions skills</p></li>
 </ol>
 <div class="cell">
 <div class="cell-output cell-output-display">
-<p><img src="skills_extraction_files/figure-html/cell-18-output-1.svg" class="img-fluid"></p>
+<p><img src="skills_extraction_files/figure-html/cell-20-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <p>This prompt chain could be represented in the following <code>label_skills_chain</code> function:</p>
@@ -798,7 +796,7 @@ cookieconsent.run({
 <pre><code>['program in python', 'cook a mean risotto']</code></pre>
 </div>
 </div>
-<p>Lets annotate the Prompt Engineer job profile again:</p>
+<p>Lets annotate our favourite ‘Prompt Engineer’ job profile once more:</p>
 <div class="cell">
 <div class="cell-output cell-output-display">
 <div style="background-color: #333333; color: #FFFFFF;">You will <span style="background-color: #C99E39;">figure out the best methods of prompting our AI</span> to accomplish a wide range of tasks, then <span style="background-color: #C99E39;">document these methods</span> to <span style="background-color: #C99E39;">build up a library of tools</span> and a <span style="background-color: #C99E39;">set of tutorials</span> that allows others to learn prompt engineering, as well as <span style="background-color: #C99E39;">work with high value partners</span> to <span style="background-color: #C99E39;">directly solve their challenges</span>.<br></div>
@@ -829,7 +827,7 @@ cookieconsent.run({
 <div style="background-color: #333333; color: #FFFFFF;">As such, we greatly value <span style="background-color: #C99E39;">communication skills</span>.<br></div>
 </div>
 </div>
-<p>We can also use GPT to infer skills that don’t match-up to strings in text. This is a more flexible approach and opens up potential for more skills to be identified:</p>
+<p>Of course we can also use LLMs to infer skills that don’t exactly match any substrings in the original text. This is a much more flexible approach and opens up potential for more skills to be identified and a greater level of creativity:</p>
 <div class="cell">
 <div class="cell-output cell-output-display">
 <div>
@@ -905,7 +903,7 @@ cookieconsent.run({
 </div>
 </div>
 </div>
-<p>GPT-4 has managed to synthesize skills from the text and rewrite them as action orientated, often removing determiners and splitting skills: “Build a set of tutorials and interactive tools” becomes “Building tutorials” and “Creating interactive tools”. We could easily this prompt chain adding checking steps to further filter results. It is likely that we will continue to use a combination transformers for tasks like skill extraction leveraging prompt design and fine-tuning.</p>
+<p>GPT-4 has managed to synthesize skills from the text and rewrite them as action orientated, often removing determiners and splitting skills. <code>Build a set of tutorials and interactive tools</code> becomes <code>Building tutorials</code> and <code>Creating interactive tools</code>. We can easily recompose this prompt chain adding checking steps to further filter results. It is likely that we will continue to use a combination transformers for tasks like skill extraction leveraging prompt design and fine-tuning.</p>
 </section>
 <section id="weirdos-and-misfits-bonus-level" class="level3">
 <h3 class="anchored" data-anchor-id="weirdos-and-misfits-bonus-level">Weirdos and Misfits Bonus Level 👾👾👾</h3>
@@ -955,10 +953,10 @@ We’ve found one of these but want at least one more.<br></div>
 <div style="background-color: #333333; color: #FFFFFF;">It’s important when <span style="background-color: #C99E39;">dealing with large organisations</span> to <span style="background-color: #C99E39;">dart around at different levels</span>, <span style="background-color: #C99E39;">not be stuck with formal hierarchies</span>.<br></div>
 </div>
 </div>
-<p>We notice the model picks up on <code>spread fake news about fake news</code> as the context may not be clear that whilst this is indeed a (useful) skill, it is undesirable. Lets now extend our prompt-chain for GPT-4 to include an explanation step where the model will attempt to explain why it has or has not labelled a sentence with skills:</p>
+<p>We notice the model picks up on <code>spread fake news about fake news</code> as the context may not be clear that whilst this is indeed a (useful) skill, it is undesirable in the opinion of the recruiter. Lets now extend our prompt-chain to include an explanation step where will get GPT-4 to attempt an explanation as to why it has or has not labelled a sentence with skills:</p>
 <div class="cell">
 <div class="cell-output cell-output-display">
-<p><img src="skills_extraction_files/figure-html/cell-28-output-1.svg" class="img-fluid"></p>
+<p><img src="skills_extraction_files/figure-html/cell-30-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <p>The above prompt chain could be represented as follows:</p>
@@ -1009,7 +1007,7 @@ We’ve found one of these but want at least one more.<br></div>
 <span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>    chat_history.append(annotation_prompt)</span>
 <span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> _extract_skills_from_response(chat_history)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We will only run this on the first ~10 sentences for brevity but hopefully this example demonstrates how simple it is to add additional prompting steps for explainability or checking to an existing prompt chain:</p>
+<p>For brevity we only run inference on the first ~10 sentences. We hope this demonstrates how simple it is to add additional steps for explainability or checking to an existing prompt chain:</p>
 <div class="cell">
 <div class="cell-output cell-output-display">
 <div>
