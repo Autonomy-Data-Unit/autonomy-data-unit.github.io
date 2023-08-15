@@ -242,69 +242,6 @@ cookieconsent.run({
 <p>Deliveroo’s website has been archived many times by the Wayback Machine. Some of the captured webpages include search results specific to UK locations with Deliveroo Editions filters. Unfortunately only 46 webpages with Editions search results could be retrieved, each of which was captured between 1 and 5 times over a period of 2 years. This data is likely too sparse to allow for detailed analysis of the growth of Editions in the UK. However the data has some utility in providing an incomplete historic list of Editions partners between 2020 and 2022.</p>
 <p><img src="assets/wayback.png" class="img-fluid"></p>
 <p>By iterating through every capture extracting the restaurant names, restaurant urls, Editions and timestamps, we can build a dataset of over 500 Editions partners:</p>
-<div class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display" data-execution_count="9">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">location</th>
-<th data-quarto-table-cell-role="th">timestamps</th>
-<th data-quarto-table-cell-role="th">timestamp_urls</th>
-<th data-quarto-table-cell-role="th">restaurant_url</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Oowee Vegan</td>
-<td>brighton-editions</td>
-<td>['20201019', '20201021']</td>
-<td>['https://web.archive.org/web/20201019/https:/...</td>
-<td>https://deliveroo.co.uk/menu/brighton/brighton...</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Shake Shack</td>
-<td>brighton-editions</td>
-<td>['20201019', '20201021']</td>
-<td>['https://web.archive.org/web/20201019/https:/...</td>
-<td>https://deliveroo.co.uk/menu/brighton/brighton...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Lost Boys Chicken</td>
-<td>hove</td>
-<td>['20201019', '20210618', '20210123', '20201021...</td>
-<td>['https://web.archive.org/web/20201019/https:/...</td>
-<td>https://deliveroo.co.uk/menu/brighton/hove/los...</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>The Athenian</td>
-<td>brighton-editions</td>
-<td>['20201019', '20210618', '20210123', '20201021...</td>
-<td>['https://web.archive.org/web/20201019/https:/...</td>
-<td>https://deliveroo.co.uk/menu/brighton/brighton...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>The Great British Cheesecake Company</td>
-<td>brighton-editions</td>
-<td>['20201019', '20210618', '20210123', '20210511...</td>
-<td>['https://web.archive.org/web/20201019/https:/...</td>
-<td>https://deliveroo.co.uk/menu/brighton/brighton...</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
 <p>Whilst mapping the growth of Editions with historic data remains an elusive goal, we can look to present day data to build a map of Editions in the UK in its current state.</p>
 </section>
 <section id="present-day-editions-data" class="level2">
@@ -312,123 +249,6 @@ cookieconsent.run({
 <p>Many of Deliveroo’s well known Editions locations can be found by searching the Food Standards Agency (FSA) for businesses containing “Deliveroo” in their title. Deliveroo <a href="https://help.deliveroo.com/en/articles/3198655-deliveroo-food-hygiene-rating-policy">requires its restaurants to have an FSA rating of at least 2</a> to use the platform. Deliveroo advertises Editions as going above and beyond these minimal requirements, <a href="https://restaurants.deliveroo.com/en-gb/editions#:~:text=High%2C%20high%20standards,hygiene%20and%20safety">maintaining the highest possible hygiene ratings across all of its sites</a>. This is a far cry from the poor hygiene practices and lack of regulation associated with the original ‘ghost kitchens’ of New York that advertised through Grubhub and <a href="https://www.nbcnewyork.com/news/local/seamless-restaurant-grubhub-fake-eatery-unregulated-kitchen-investigation-i-team-new-york-city/2013699/">attracted media attention in 2015.</a></p>
 <p><img src="assets/fsa.png" class="img-fluid"></p>
 <p>We can cross reference 16 of these businesses with Editions locations encountered from searching Deliveroo’s site:</p>
-<div class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display" data-execution_count="10">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Editions Name</th>
-<th data-quarto-table-cell-role="th">FSA Business</th>
-<th data-quarto-table-cell-role="th">Address</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>bsy-2-editions</td>
-<td>Deliveroo sp ltd</td>
-<td>145 Ormside Street London SE15 1TF</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>honor-oak-park</td>
-<td>Deliveroo SP Ltd</td>
-<td>Units 3-4 Dulwich Business Centre Malham Road ...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>culvert-place-editions</td>
-<td>Deliveroo</td>
-<td>Unit 2 Editions Battersea 15a Parkfield Indust...</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>wandsworth-editions</td>
-<td>Deliveroo SP Ltd</td>
-<td>Unit 4 271 Merton Road London SW18 5JS</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>canning-town-editions</td>
-<td>Deliveroo SP Ltd</td>
-<td>Unit 3 Crescent Court Business Centre 4C North...</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>maida-vale-editions</td>
-<td>Deliveroo Hop Ltd</td>
-<td>Unit 24 Mitre Bridge Industrial Park Mitre Way...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
-<td>caledonian-road-and-barnsbury</td>
-<td>Deliveroo</td>
-<td>Deliveroo Unit 4 Roman Way Industrial Estate 1...</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
-<td>brent-cross-editions</td>
-<td>Deliveroo SP Ltd</td>
-<td>2 Phoenix Industrial Estate Apsley Way London ...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">8</td>
-<td>hornsey-station</td>
-<td>Deliveroo SP Ltd</td>
-<td>Unit 21 Cranford Way Hornsey London N8 9DG</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">9</td>
-<td>cambridge-editions</td>
-<td>Deliveroo</td>
-<td>Unit 3-4 Restwell House Coldhams Road Cambridg...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">10</td>
-<td>jubilee-park-lee-valley</td>
-<td>Deliveroo SP Ltd</td>
-<td>Unit 6 Great Cambridge Industrial Estate Linco...</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">11</td>
-<td>glasgow-editions</td>
-<td>Deliveroo SP Ltd</td>
-<td>1 Scotland Street Glasgow G5 8LS</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">12</td>
-<td>editions-in-leeds</td>
-<td>Deliveroo Editions</td>
-<td>Unit 1 Scott Hall Mills Scott Hall Street Mean...</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">13</td>
-<td>nottingham-editions</td>
-<td>Deliveroo SP Ltd</td>
-<td>Unit 1 Redwood Court Salisbury Street Nottingh...</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">14</td>
-<td>brighton-and-hove-editions</td>
-<td>Deliveroo Editions</td>
-<td>Unit 1 Saxon Works 22 Olive Road Hove BN3 7GY</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">15</td>
-<td>bristol-editions-site</td>
-<td>Deliveroo SP Ltd</td>
-<td>Unit 1 Glenfrome House Eastgate Road Eastville...</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
 <p>However there are many Editions partners that do not operate from any of these addresses. Here is a handful of examples:</p>
 <ul>
 <li><a href="https://deliveroo.co.uk/menu/edinburgh/broughton/luxford-burgers-picardy-place">Luxford Burgers</a>, <a href="https://deliveroo.co.uk/menu/Edinburgh/broughton/sabor-latin-american-edn">Sabor</a> &amp; <a href="https://deliveroo.co.uk/menu/Edinburgh/broughton/bulked-loaded-fries-edn">Bulked - Loaded Fries</a> (Broughton)</li>
@@ -440,113 +260,18 @@ cookieconsent.run({
 <section id="mapping-deliveroo-editions" class="level2">
 <h2 class="anchored" data-anchor-id="mapping-deliveroo-editions">Mapping Deliveroo Editions</h2>
 <p>By searching all of the Deliveroo restaurants delivering to postcodes within each of the UK’s ~2900 postcode districts, <strong>238 Editions partners</strong> were identified across <strong>53 addresses</strong> and <strong>12 regions</strong>:</p>
-<div class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
 
         <iframe width="100%" height="900px" src="data/editions_extra.html" frameborder="0" allowfullscreen=""></iframe>
         
 </div>
 </div>
-<div class="cell" data-execution_count="4">
-<div class="cell-output cell-output-display" data-execution_count="12">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">name</th>
-<th data-quarto-table-cell-role="th">location</th>
-<th data-quarto-table-cell-role="th">edition</th>
-<th data-quarto-table-cell-role="th">restaurant_url</th>
-<th data-quarto-table-cell-role="th">address</th>
-<th data-quarto-table-cell-role="th">lat</th>
-<th data-quarto-table-cell-role="th">lon</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>Yacob's Kitchen</td>
-<td>London</td>
-<td>bsy-1-editions</td>
-<td>https://deliveroo.co.uk/menu/London/bsy-1-edit...</td>
-<td>Unit 9, British Wharf, Landmann Way, London, S...</td>
-<td>51.484623</td>
-<td>-0.044459</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>Shake Shack</td>
-<td>London</td>
-<td>bsy-1-editions</td>
-<td>https://deliveroo.co.uk/menu/London/bsy-1-edit...</td>
-<td>Unit 9, British Wharf, Landmann Way, London, S...</td>
-<td>51.484623</td>
-<td>-0.044459</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>Poke Shack</td>
-<td>London</td>
-<td>bsy-1-editions</td>
-<td>https://deliveroo.co.uk/menu/London/bsy-1-edit...</td>
-<td>Unit 9, British Wharf, Landmann Way, London, S...</td>
-<td>51.484623</td>
-<td>-0.044459</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>Dishoom</td>
-<td>London</td>
-<td>bsy-2-editions</td>
-<td>https://deliveroo.co.uk/menu/London/bsy-2-edit...</td>
-<td>145 Ormside Street, South Bermondsey, London, ...</td>
-<td>51.483107</td>
-<td>-0.055627</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>WING·STOP</td>
-<td>London</td>
-<td>bsy-2-editions</td>
-<td>https://deliveroo.co.uk/menu/London/bsy-2-edit...</td>
-<td>145 Ormside Street, London, SE151TF</td>
-<td>51.483107</td>
-<td>-0.055627</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
 <p>Wingstop (<a href="https://deliveroorestaurantawards.com/">2021 Deliveroo Restaurant of the Year winner</a>), Dishoom (<a href="https://deliveroorestaurantawards.com/">2021 Deliveroo Best Indian Restaurant winner</a>) and the Athenian appear to be the most scalable partners appearing in 6+ Editions across the UK. Editions sites also include popular partners that don’t offer cooked food like the Californian CBD drinks vendors ‘Trip CBD Store’ and Ben &amp; Jerry’s.</p>
-<div class="cell" data-execution_count="5">
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-6-output-1.png" width="693" height="429"></p>
-</div>
-</div>
 <p><img src="assets/wings.jpeg" class="img-fluid"></p>
 <p>London is the region containing the most dark kitchens with 32 Editions sites compared to the 21 locations spread across all other regions of the UK:</p>
-<div class="cell" data-execution_count="6">
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-7-output-1.png" width="649" height="429"></p>
-</div>
-</div>
 <p>London also offers the greatest choice of Editions partners at 127 compared to the 112 vendors spread across the other Editions sites.</p>
-<div class="cell" data-execution_count="7">
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-8-output-1.png" width="646" height="429"></p>
-</div>
-</div>
 <p>The Editions site with the most partners is in Leeds with 22 partners under one roof at 1 Scott Hall Street:</p>
-<div class="cell" data-execution_count="8">
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-9-output-1.png" width="715" height="429"></p>
-</div>
-</div>
 <p><img src="assets/leeds.png" class="img-fluid"></p>
 
 
