@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sean Greaves">
-<meta name="dcterms.date" content="2023-07-24">
+<meta name="dcterms.date" content="2023-10-30">
 <meta name="description" content="Building a UK-wide map of Deliveroo Editions">
 
 <title>ADU blog - Dark Kitchen Cartography</title>
@@ -202,7 +202,7 @@ cookieconsent.run({
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 24, 2023</p>
+        <p class="date">October 30, 2023</p>
       </div>
     </div>
     
@@ -220,58 +220,255 @@ cookieconsent.run({
 
 
 
-<p><img src="assets/cover.png" class="img-fluid"></p>
-<p>Dedicated sites for preparing takeaway meals for delivery-only known as “dark kitchens” have been widely adopted across the food service industry throughout the past half decade. Dark kitchens enable restaurants to seperate their delivery business from in-house business and operate from non-residential central locations where overhead and operating costs are reduced. Understanding the successes and failures of this service model could provide useful insights into emerging forms of economic planning, risk management, urban design and food distribution. However there is a lack of detailed data on the growth and current state of dark kitchens within the UK.</p>
-<p>To the best of our knowledge, a map of the UK’s dark kitchen locations does not exist. Therefore we set out to make one for Deliveroo’s UK dark kitchen facilities, known as ‘Editions’, to better understand their growth and current state.</p>
-<p><strong>Disclaimer: all data within this blog post was gathered before Wednesday 19th July 2023.</strong></p>
+<p><img src="assets/cover_alt.png" class="img-fluid"></p>
+<p>Dark kitchens are dedicated sites for preparing delivery-only takeaway meals; a model that has been widely adopted across the food service industry throughout the past decade. The sites are often located in well-connected non-residential urban locations where overhead and operating costs are reduced. Many restaurants have successfully embraced this service model, allowing them to untether and optimise their delivery business from in-house. A better understanding of the successes and failures of dark kitchens could provide insights relevant to economic planning, risk management, urban design and food distribution.</p>
+<p>There is a lack of detailed data on the growth and current state of dark kitchens across the UK. To the best of our knowledge, a map of the UK’s dark kitchen locations does not exist. Therefore we set out to create a snapshot of Deliveroo’s dark kitchen facilities, known as ‘Editions’.</p>
+<p><strong>Disclaimer: our dark kitchen map was created with data gathered in July 2023. Unfortunately due to changes in Deliveroo’s website, it isn’t possible to replicate all of our data collection methods.</strong></p>
 <!-- ![](assets/pkl.png) -->
 <section id="locating-editions" class="level2">
 <h2 class="anchored" data-anchor-id="locating-editions">Locating Editions</h2>
-<p>Deliveroo Editions launched in May 2017 as a concept to put ‘an end to postcode food envy’. Initially trialed in Camberwell, Battersea, Dulwich and Canary Wharf, Deliveroo announced there ambition to scale to <a href="https://www.wired.co.uk/article/deliveroo-editions-local-restaurants">30 locations across the UK</a> within the first year. The Internet Archive’s Wayback Machine maintains a capture of the webpage for the original Deliveroo Editions announcement.</p>
+<p>Deliveroo Editions launched in May 2017 as a ‘concept’ to end ‘postcode food envy’. The first kitchens were set-up in Camberwell, Battersea, Dulwich and Canary Wharf with the intention to scale to <a href="https://www.wired.co.uk/article/deliveroo-editions-local-restaurants">30 locations across the UK</a> within the first year. The Internet Archive’s Wayback Machine maintains a capture of the webpage announcing the launch.</p>
 <p><img src="assets/editions_launch.png" class="img-fluid"></p>
-<p>To find restaurants using Deliveroo’s dark kitchens, known as Editions partners, we can add <code>tags=deliveroo+editions</code> as a query string when searching for restaurants near a given location. For example to find all the Editions partners delivering to Stepney Green, we can try: <code>https://deliveroo.co.uk/restaurants/london/stepney-green?fulfillment_method=DELIVERY&amp;tags=deliveroo+editions</code>:</p>
+<p>As of July 2023 it was possible to identify nearby Editions restaurants from the Deliveroo website by appending <code>tags=deliveroo+editions</code> to any delivery search url. For example to find all the Editions partners delivering to Stepney Green, we could try: <code>https://deliveroo.co.uk/restaurants/london/stepney-green?fulfillment_method=DELIVERY&amp;tags=deliveroo+editions</code>:</p>
 <p><img src="assets/query.png" class="img-fluid"></p>
-<p>If we load the webpage for Popeyes Louisiana Kitchen, we can identify the partner is based at “Whitechapel Editions” from the location name in restaurant’s url: <code>https://deliveroo.co.uk/menu/London/whitechapel-editions/popeyes-editions-wme/?day=today&amp;geohash=gcpvngtckn3c&amp;time=ASAP</code>. Therefore the address for Popeyes Louisiana Kitchen is also the address for Whitechapel Editions which happens to be 10 Assembly Passage, London, E14UT, a <a href="https://www.loopnet.co.uk/Listing/10-40-Assembly-Passage-London/8354101/">2-storey B-class office space with a disco ball included built in 1906</a> right next to the busy A11 road into central London.</p>
+<p>At the time of publication (October 2023) this filter tag still exists on Deliveroo’s website, however it no longer filters Editions restaurants. An alternative filtering method would need to be implemented to replicate our approach to data collection, perhaps by identifying the restaurants with ‘editions’ included in their <code>href</code> attributes:</p>
+<p><img src="assets/editions_filter.png" class="img-fluid"></p>
+<p>If we navigate to an Editions partner webpage (for example, Popeyes Louisiana Kitchen), we can tell the restaurant is based at “Whitechapel Editions” because the location name is contained within the restaurant’s url: <code>https://deliveroo.co.uk/menu/London/whitechapel-editions/popeyes-editions-wme/?day=today&amp;geohash=gcpvngtckn3c&amp;time=ASAP</code>. We therefore assume the address for Popeyes Louisiana Kitchen is also the address for Whitechapel Editions which happens to be 10 Assembly Passage, a <a href="https://www.loopnet.co.uk/Listing/10-40-Assembly-Passage-London/8354101/">2-storey B-class office space</a> (with disco ball included) built in 1906, next to the busy A11 road into central London.</p>
 <p><img src="assets/assembly.jpeg" class="img-fluid"></p>
-<p>To find all the other partners based at Whitechapel Editions (<code>london/whitechapel-editions</code>), we can search for Editions partners (<code>tags=deliveroo+editions</code>) nearby with the following url: <code>https://deliveroo.co.uk/restaurants/london/whitechapel-editions?fulfillment_method=DELIVERY&amp;tags=deliveroo+editions</code>. We can deduce that all the restaurants based 0.0 miles away are those at the Editions kitchen and can validate this by checking for <code>whitechapel-editions</code> in their urls.</p>
+<p>To find all the other partners based at Whitechapel Editions (<code>london/whitechapel-editions</code>), we can search for Editions partners (<code>tags=deliveroo+editions</code>) nearby with the following url: <code>https://deliveroo.co.uk/restaurants/london/whitechapel-editions?fulfillment_method=DELIVERY&amp;tags=deliveroo+editions</code>. We infer all restaurants located 0.0 miles away are based out of the Editions facility and can validate this by checking for <code>whitechapel-editions</code> in their urls.</p>
 <p><img src="assets/whitechapel.png" class="img-fluid"></p>
-<p>Using this approach, we can trawl the Internet Archive for Deliveroo’s historic data and explore the possibility of charting the growth of Editions since 2017.</p>
+<p>Using this approach, we searched the Internet Archive for all historic data on Deliveroo Editions to see if we could chart their growth from 2017.</p>
 </section>
 <section id="historic-editions-data" class="level2">
 <h2 class="anchored" data-anchor-id="historic-editions-data">Historic Editions Data</h2>
-<p>Deliveroo’s website has been archived many times by the Wayback Machine. Some of the captured webpages include search results specific to UK locations with Deliveroo Editions filters. Unfortunately only 46 webpages with Editions search results could be retrieved, each of which was captured between 1 and 5 times over a period of 2 years. This data is likely too sparse to allow for detailed analysis of the growth of Editions in the UK. However the data has some utility in providing an incomplete historic list of Editions partners between 2020 and 2022.</p>
+<p>Deliveroo’s website has been archived many times by the Wayback Machine. Some of the captured webpages include search results specific to UK locations with Deliveroo Editions filters. Only 46 webpages with Editions search results could be retrieved, each of which was captured between 1 and 5 times over a period of 2 years. Unfortunately this data is likely too sparse to allow for detailed analysis of the growth of Editions in the UK. However the data has some use in providing an incomplete historic list of Editions partners between 2020 and 2022.</p>
 <p><img src="assets/wayback.png" class="img-fluid"></p>
-<p>By iterating through every capture extracting the restaurant names, restaurant urls, Editions and timestamps, we can build a dataset of over 500 Editions partners:</p>
-<p>Whilst mapping the growth of Editions with historic data remains an elusive goal, we can look to present day data to build a map of Editions in the UK in its current state.</p>
+<p>By iterating through every capture extracting the restaurant names, urls and timestamps, we can build a dataset of ~260 Editions partners:</p>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">location</th>
+<th data-quarto-table-cell-role="th">timestamps</th>
+<th data-quarto-table-cell-role="th">timestamp_urls</th>
+<th data-quarto-table-cell-role="th">restaurant_url</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Oowee Vegan</td>
+<td>brighton-editions</td>
+<td>['20201019', '20201021']</td>
+<td>['https://web.archive.org/web/20201019/https:/...</td>
+<td>https://deliveroo.co.uk/menu/brighton/brighton...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Shake Shack</td>
+<td>brighton-editions</td>
+<td>['20201019', '20201021']</td>
+<td>['https://web.archive.org/web/20201019/https:/...</td>
+<td>https://deliveroo.co.uk/menu/brighton/brighton...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Lost Boys Chicken</td>
+<td>hove</td>
+<td>['20201019', '20210618', '20210123', '20201021...</td>
+<td>['https://web.archive.org/web/20201019/https:/...</td>
+<td>https://deliveroo.co.uk/menu/brighton/hove/los...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>The Athenian</td>
+<td>brighton-editions</td>
+<td>['20201019', '20210618', '20210123', '20201021...</td>
+<td>['https://web.archive.org/web/20201019/https:/...</td>
+<td>https://deliveroo.co.uk/menu/brighton/brighton...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>The Great British Cheesecake Company</td>
+<td>brighton-editions</td>
+<td>['20201019', '20210618', '20210123', '20210511...</td>
+<td>['https://web.archive.org/web/20201019/https:/...</td>
+<td>https://deliveroo.co.uk/menu/brighton/brighton...</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Whilst it may not be possible to map the growth of Deliveroo’s dark kitchen footprint with great detail, we can use more recent data to build a snapshot in time of Deliveroo Editions in the UK.</p>
 </section>
 <section id="present-day-editions-data" class="level2">
 <h2 class="anchored" data-anchor-id="present-day-editions-data">Present-Day Editions Data</h2>
-<p>Many of Deliveroo’s well known Editions locations can be found by searching the Food Standards Agency (FSA) for businesses containing “Deliveroo” in their title. Deliveroo <a href="https://help.deliveroo.com/en/articles/3198655-deliveroo-food-hygiene-rating-policy">requires its restaurants to have an FSA rating of at least 2</a> to use the platform. Deliveroo advertises Editions as going above and beyond these minimal requirements, <a href="https://restaurants.deliveroo.com/en-gb/editions#:~:text=High%2C%20high%20standards,hygiene%20and%20safety">maintaining the highest possible hygiene ratings across all of its sites</a>. This is a far cry from the poor hygiene practices and lack of regulation associated with the original ‘ghost kitchens’ of New York that advertised through Grubhub and <a href="https://www.nbcnewyork.com/news/local/seamless-restaurant-grubhub-fake-eatery-unregulated-kitchen-investigation-i-team-new-york-city/2013699/">attracted media attention in 2015.</a></p>
+<p>Many of Deliveroo’s well known Editions locations can be found by searching the Food Standards Agency (FSA) for businesses containing “Deliveroo” in their title. Deliveroo <a href="https://help.deliveroo.com/en/articles/3198655-deliveroo-food-hygiene-rating-policy">requires its restaurants to have an FSA rating of at least 2</a> to use the platform. Editions are advertised as going above and beyond these minimal requirements, <a href="https://restaurants.deliveroo.com/en-gb/editions#:~:text=High%2C%20high%20standards,hygiene%20and%20safety">maintaining the highest possible hygiene ratings across all sites</a>. This is a far cry from the poor hygiene practices and lack of regulation associated with the original ‘ghost kitchens’ of New York that advertised through Grubhub and <a href="https://www.nbcnewyork.com/news/local/seamless-restaurant-grubhub-fake-eatery-unregulated-kitchen-investigation-i-team-new-york-city/2013699/">attracted negative media attention in 2015.</a></p>
 <p><img src="assets/fsa.png" class="img-fluid"></p>
 <p>We can cross reference 16 of these businesses with Editions locations encountered from searching Deliveroo’s site:</p>
-<p>However there are many Editions partners that do not operate from any of these addresses. Here is a handful of examples:</p>
-<ul>
-<li><a href="https://deliveroo.co.uk/menu/edinburgh/broughton/luxford-burgers-picardy-place">Luxford Burgers</a>, <a href="https://deliveroo.co.uk/menu/Edinburgh/broughton/sabor-latin-american-edn">Sabor</a> &amp; <a href="https://deliveroo.co.uk/menu/Edinburgh/broughton/bulked-loaded-fries-edn">Bulked - Loaded Fries</a> (Broughton)</li>
-<li><a href="https://deliveroo.co.uk/menu/glasgow/glasgow-city-centre/sprigg-ingram-st">Sprigg - Ingram Street</a> (Glasgow City Centre)</li>
-<li><a href="https://deliveroo.co.uk/menu/Leeds/wortley/pasta-evangelists-leeds">Pasta Evangelists</a> (Wortley)</li>
-</ul>
-<p>To get all of the Editions partners in the UK at any one time we can search Deliveroo with a postcode from each of the ~2900 postcode districts in the UK. Whilst this brute force approach is relatively inefficient given that Deliveroo is not operating at most UK postcodes outside of cities and large towns, it does offer a near-complete picture of Deliveroo’s operations in the UK and most of the Editions partners.</p>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Editions Name</th>
+<th data-quarto-table-cell-role="th">FSA Business</th>
+<th data-quarto-table-cell-role="th">Address</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>bsy-2-editions</td>
+<td>Deliveroo sp ltd</td>
+<td>145 Ormside Street London SE15 1TF</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>honor-oak-park</td>
+<td>Deliveroo SP Ltd</td>
+<td>Units 3-4 Dulwich Business Centre Malham Road ...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>culvert-place-editions</td>
+<td>Deliveroo</td>
+<td>Unit 2 Editions Battersea 15a Parkfield Indust...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>wandsworth-editions</td>
+<td>Deliveroo SP Ltd</td>
+<td>Unit 4 271 Merton Road London SW18 5JS</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>canning-town-editions</td>
+<td>Deliveroo SP Ltd</td>
+<td>Unit 3 Crescent Court Business Centre 4C North...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>maida-vale-editions</td>
+<td>Deliveroo Hop Ltd</td>
+<td>Unit 24 Mitre Bridge Industrial Park Mitre Way...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>caledonian-road-and-barnsbury</td>
+<td>Deliveroo</td>
+<td>Deliveroo Unit 4 Roman Way Industrial Estate 1...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>brent-cross-editions</td>
+<td>Deliveroo SP Ltd</td>
+<td>2 Phoenix Industrial Estate Apsley Way London ...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>hornsey-station</td>
+<td>Deliveroo SP Ltd</td>
+<td>Unit 21 Cranford Way Hornsey London N8 9DG</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>cambridge-editions</td>
+<td>Deliveroo</td>
+<td>Unit 3-4 Restwell House Coldhams Road Cambridg...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>jubilee-park-lee-valley</td>
+<td>Deliveroo SP Ltd</td>
+<td>Unit 6 Great Cambridge Industrial Estate Linco...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>glasgow-editions</td>
+<td>Deliveroo SP Ltd</td>
+<td>1 Scotland Street Glasgow G5 8LS</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>editions-in-leeds</td>
+<td>Deliveroo Editions</td>
+<td>Unit 1 Scott Hall Mills Scott Hall Street Mean...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>nottingham-editions</td>
+<td>Deliveroo SP Ltd</td>
+<td>Unit 1 Redwood Court Salisbury Street Nottingh...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>brighton-and-hove-editions</td>
+<td>Deliveroo Editions</td>
+<td>Unit 1 Saxon Works 22 Olive Road Hove BN3 7GY</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>bristol-editions-site</td>
+<td>Deliveroo SP Ltd</td>
+<td>Unit 1 Glenfrome House Eastgate Road Eastville...</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>The above list captures some of Deliveroo’s most well-known and established dark kitchens, although to get a complete picture we turn to Deliveroo’s website to identify all of the restuarants tagged as operating from an Editions site.</p>
 </section>
 <section id="mapping-deliveroo-editions" class="level2">
 <h2 class="anchored" data-anchor-id="mapping-deliveroo-editions">Mapping Deliveroo Editions</h2>
-<p>By searching all of the Deliveroo restaurants delivering to postcodes within each of the UK’s ~2900 postcode districts, <strong>238 Editions partners</strong> were identified across <strong>53 addresses</strong> and <strong>12 regions</strong>:</p>
-<div class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display" data-execution_count="1">
+<p>To get all of the Editions partners in the UK at any one time we can search Deliveroo’s website with a postcode from each of the ~2900 postcode districts. This brute force search strategy is perhaps inefficient given that Deliveroo doesn’t operate within most UK postcodes outside of cities and large towns, although it does likely offer a near-complete picture of Deliveroo’s operations in the UK.</p>
+<p>By searching all of the Deliveroo restaurants delivering to postcodes within each of the UK’s ~2900 postcode districts in July 2023, <strong>238 editions partners</strong> were identified across <strong>53 addresses</strong> and <strong>12 regions</strong>:</p>
+<div class="cell">
+<div class="cell-output cell-output-display">
 
         <iframe width="100%" height="900px" src="data/editions_extra.html" frameborder="0" allowfullscreen=""></iframe>
         
 </div>
 </div>
-<p>Wingstop (<a href="https://deliveroorestaurantawards.com/">2021 Deliveroo Restaurant of the Year winner</a>), Dishoom (<a href="https://deliveroorestaurantawards.com/">2021 Deliveroo Best Indian Restaurant winner</a>) and the Athenian appear to be the most scalable partners appearing in 6+ Editions across the UK. Editions sites also include popular partners that don’t offer cooked food like the Californian CBD drinks vendors ‘Trip CBD Store’ and Ben &amp; Jerry’s.</p>
+<p>Wingstop (<a href="https://deliveroorestaurantawards.com/">2021 Deliveroo Restaurant of the Year winner</a>), Dishoom (<a href="https://deliveroorestaurantawards.com/">2021 Deliveroo Best Indian Restaurant winner</a>) and the Athenian appear to be the most popular partners appearing in 6+ Editions across the UK. Editions sites also include partners that don’t offer cooked food like the Californian CBD drinks vendors ‘Trip CBD Store’ and Ben &amp; Jerry’s.</p>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
+</div>
+</div>
 <p><img src="assets/wings.jpeg" class="img-fluid"></p>
 <p>London is the region containing the most dark kitchens with 32 Editions sites compared to the 21 locations spread across all other regions of the UK:</p>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
+</div>
+</div>
 <p>London also offers the greatest choice of Editions partners at 127 compared to the 112 vendors spread across the other Editions sites.</p>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
+</div>
+</div>
 <p>The Editions site with the most partners is in Leeds with 22 partners under one roof at 1 Scott Hall Street:</p>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+</div>
+</div>
 <p><img src="assets/leeds.png" class="img-fluid"></p>
 
 
